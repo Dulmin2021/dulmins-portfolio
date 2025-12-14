@@ -955,6 +955,18 @@
     field-sizing: content;
   }
 
+  .aspect-\[300\/852\] {
+    aspect-ratio: 300 / 852;
+  }
+
+  .aspect-\[350\/852\] {
+    aspect-ratio: 350 / 852;
+  }
+
+  .aspect-\[363\/852\] {
+    aspect-ratio: 363 / 852;
+  }
+
   .aspect-\[393\/852\] {
     aspect-ratio: 393 / 852;
   }
@@ -1292,8 +1304,28 @@
     width: 100px;
   }
 
+  .w-\[120px\] {
+    width: 120px;
+  }
+
   .w-\[126px\] {
     width: 126px;
+  }
+
+  .w-\[130px\] {
+    width: 130px;
+  }
+
+  .w-\[300px\] {
+    width: 300px;
+  }
+
+  .w-\[350px\] {
+    width: 350px;
+  }
+
+  .w-\[363px\] {
+    width: 363px;
   }
 
   .w-\[393px\] {

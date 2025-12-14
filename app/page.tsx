@@ -81,9 +81,9 @@ export default function Portfolio() {
       if (!e.accelerationIncludingGravity) return
 
       const { x = 0, y = 0, z = 0 } = e.accelerationIncludingGravity
-      const deltaX = Math.abs(x - lastX)
-      const deltaY = Math.abs(y - lastY)
-      const deltaZ = Math.abs(z - lastZ)
+      const deltaX = Math.abs((x ?? 0) - lastX)
+      const deltaY = Math.abs((y ?? 0) - lastY)
+      const deltaZ = Math.abs((z ?? 0) - lastZ)
 
       if (deltaX > shakeThreshold || deltaY > shakeThreshold || deltaZ > shakeThreshold) {
         setShakeCount((prev) => {
@@ -99,9 +99,9 @@ export default function Portfolio() {
         })
       }
 
-      lastX = x
-      lastY = y
-      lastZ = z
+      lastX = x ?? 0
+      lastY = y ?? 0
+      lastZ = z ?? 0
     }
 
     if (typeof window !== "undefined" && "DeviceMotionEvent" in window) {
@@ -116,7 +116,7 @@ export default function Portfolio() {
       setTimeout(() => {
         toast({
           title: "👋 Welcome to my Portfolio!",
-          description: "Explore the apps to learn more about me. Try the Konami code for a surprise!",
+          description: "Explore the apps to learn more about me",
         })
       }, 500)
     }

@@ -14,8 +14,9 @@ const photoAlbums = [
     id: "personal",
     name: "Personal",
     count: 127,
-    thumbnail: "/professional-portrait.png",
+    thumbnail: "/professional-portrait.jpg",
   },
+  
   {
     id: "projects",
     name: "Projects",
