@@ -157,9 +157,9 @@ export default function PhotosApp({ onClose, isDarkMode }: PhotosAppProps) {
                     alt={album.name}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-3 left-3 text-white">
-                    <h3 className="font-semibold text-lg">{album.name}</h3>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute bottom-3 left-3">
+                    <h3 className="font-semibold text-lg text-white">{album.name}</h3>
                     <p className="text-sm opacity-90">{album.count} photos</p>
                   </div>
                 </button>

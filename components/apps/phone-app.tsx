@@ -2,7 +2,7 @@
 
 import { ChevronLeft, PhoneIcon, Video, Mail, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 interface PhoneAppProps {
   onClose: () => void
@@ -26,10 +26,11 @@ export default function PhoneApp({ onClose, isDarkMode }: PhoneAppProps) {
       <div className="flex-1 overflow-y-auto">
         <div className="flex flex-col items-center pt-8 pb-6">
           <Avatar className="w-32 h-32 mb-4">
-            <AvatarFallback className="text-3xl font-semibold bg-primary text-primary-foreground">JD</AvatarFallback>
+            <AvatarImage src="/professional-portrait.jpg" alt="My pic" />
+            <AvatarFallback className="text-3xl font-semibold bg-primary text-primary-foreground">DW</AvatarFallback>
           </Avatar>
-          <h2 className="text-2xl font-bold mb-1">John Developer</h2>
-          <p className="text-muted-foreground">Portfolio Owner</p>
+          <h2 className="text-2xl font-bold mb-1">Dulmin Wickramage</h2>
+          <p className="text-muted-foreground">DevOps enthusiast</p>
         </div>
 
         {/* Action Buttons */}
@@ -65,26 +66,26 @@ export default function PhoneApp({ onClose, isDarkMode }: PhoneAppProps) {
           <div className="space-y-4">
             <div>
               <p className="text-xs text-muted-foreground mb-1">mobile</p>
-              <a href="tel:+1234567890" className="text-primary text-lg">
-                +1 (234) 567-890
+              <a href="tel:+94767477994" className="text-primary text-lg">
+                +94 (767) 477-994
               </a>
             </div>
             <div>
               <p className="text-xs text-muted-foreground mb-1">email</p>
-              <a href="mailto:john@example.com" className="text-primary text-lg">
-                john@example.com
+              <a href="mailto:dulmin.code@gmail.com" className="text-primary text-lg">
+                dulmin.code@gmail.com 
               </a>
             </div>
             <div>
               <p className="text-xs text-muted-foreground mb-1">LinkedIn</p>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary text-lg">
-                linkedin.com/in/johndeveloper
+              <a href="https://lk.linkedin.com/in/dulmin-wickramage-464b23197" target="_blank" rel="noopener noreferrer" className="text-primary text-lg">
+                dulmin-wickramage
               </a>
             </div>
             <div>
               <p className="text-xs text-muted-foreground mb-1">GitHub</p>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-primary text-lg">
-                github.com/johndeveloper
+              <a href="https://github.com/Dulmin2021" target="_blank" rel="noopener noreferrer" className="text-primary text-lg">
+                Dulmin2021
               </a>
             </div>
           </div>
@@ -94,8 +95,7 @@ export default function PhoneApp({ onClose, isDarkMode }: PhoneAppProps) {
         <div className="px-6 py-4 border-t border-border">
           <p className="text-xs text-muted-foreground mb-2">Notes</p>
           <p className="text-sm leading-relaxed">
-            Passionate full-stack developer with 5+ years of experience building web applications. Specializing in
-            React, Next.js, and Node.js. Always excited to work on innovative projects!
+           Motivated and passionate Computer Science undergraduate seeking a hands-on Internship to apply and expand my knowledge in DevOps practices. Eager to contribute to automation, infrastructure, and machine learning pipelines while learning from industry professionals in a dynamic team environment.
           </p>
         </div>
       </div>

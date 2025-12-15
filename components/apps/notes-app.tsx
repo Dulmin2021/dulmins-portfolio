@@ -91,7 +91,7 @@ Courses & Learning:
 • Machine Learning Fundamentals
 • Web Performance Optimization`,
 
-  3: `Fun Facts About Me
+  3: `This is Me
 
 ☕ Coffee Enthusiast
 I start every morning with a pour-over coffee. Favorite roast: Ethiopian Yirgacheffe
@@ -106,7 +106,7 @@ Hiking, camping, and exploring nature trails on weekends
 Enjoy strategy games and indie titles. Currently playing: Hollow Knight
 
 🌍 Languages
-English (native), Spanish (fluent), learning Japanese
+Sinhala (native), English, learning Spanish & German
 
 💻 First Code
 Built my first website at age 14 - a fan site for my favorite band`,

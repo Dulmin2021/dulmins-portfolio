@@ -55,14 +55,14 @@ export default function MusicApp({ onClose, isDarkMode }: MusicAppProps) {
 
   if (view === "player") {
     return (
-      <div className="w-full h-full bg-gradient-to-b from-purple-900 via-pink-800 to-slate-900 flex flex-col animate-zoom-in text-white">
+      <div className="w-full h-full bg-gradient-to-b from-purple-900 via-pink-800 to-slate-900 flex flex-col animate-zoom-in">
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-3">
-          <Button variant="ghost" size="sm" onClick={() => setView("library")} className="gap-1 text-white">
+          <Button variant="ghost" size="sm" onClick={() => setView("library")} className="gap-1 text-white hover:text-white/80">
             <ChevronLeft className="w-5 h-5" />
           </Button>
-          <span className="text-sm font-medium">Now Playing</span>
-          <Button variant="ghost" size="icon" className="text-white">
+          <span className="text-sm font-medium text-white">Now Playing</span>
+          <Button variant="ghost" size="icon" className="text-white hover:text-white/80">
             <MoreHorizontal className="w-5 h-5" />
           </Button>
         </div>
@@ -79,11 +79,11 @@ export default function MusicApp({ onClose, isDarkMode }: MusicAppProps) {
 
           {/* Track Info */}
           <div className="w-full text-center mb-2">
-            <h2 className="text-2xl font-bold mb-2">{currentTrack.title}</h2>
+            <h2 className="text-2xl font-bold mb-2 text-white">{currentTrack.title}</h2>
             <p className="text-white/80">{currentTrack.artist}</p>
           </div>
 
-          <Button variant="ghost" size="icon" className="text-white mb-6">
+          <Button variant="ghost" size="icon" className="text-white hover:text-white/80 mb-6">
             <Heart className="w-6 h-6" />
           </Button>
 
@@ -103,7 +103,7 @@ export default function MusicApp({ onClose, isDarkMode }: MusicAppProps) {
 
           {/* Controls */}
           <div className="flex items-center justify-center gap-8">
-            <Button variant="ghost" size="icon" className="text-white">
+            <Button variant="ghost" size="icon" className="text-white hover:text-white/80">
               <SkipBack className="w-8 h-8" />
             </Button>
             <Button
@@ -113,7 +113,7 @@ export default function MusicApp({ onClose, isDarkMode }: MusicAppProps) {
             >
               {isPlaying ? <Pause className="w-8 h-8" /> : <Play className="w-8 h-8 ml-1" />}
             </Button>
-            <Button variant="ghost" size="icon" className="text-white">
+            <Button variant="ghost" size="icon" className="text-white hover:text-white/80">
               <SkipForward className="w-8 h-8" />
             </Button>
           </div>

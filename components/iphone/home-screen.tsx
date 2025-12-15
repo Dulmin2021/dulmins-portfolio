@@ -184,7 +184,7 @@ export default function HomeScreen({ isDarkMode, onAppClick }: HomeScreenProps) 
             />
             <AppIcon
               name="Safari"
-              icon= "/message-icon.png"
+              icon= "/podcasts-icon.svg"
               iconClassName="w-14 h-14"
               color="bg-gradient-to-br from-blue-400 to-cyan-500"
               showLabel={false}
