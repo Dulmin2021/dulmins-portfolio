@@ -27,7 +27,7 @@ export default function IPhoneFrame({ children, isDarkMode, setIsDarkMode }: IPh
       </div>
 
       {/* iPhone 15 Pro Frame */}
-      <div className="relative w-[363px] h-[852px] max-h-[95vh] aspect-[363/852] bg-[#1d1d1f] rounded-[55px] p-3 shadow-2xl scale-[0.85] md:scale-100">
+      <div className="relative w-[353px] h-[852px] max-h-[95vh] aspect-[353/852] bg-[#1d1d1f] rounded-[55px] p-3 shadow-2xl scale-[0.85] md:scale-100">
         {/* Dynamic Island */}
         <div className="absolute top-6 left-1/2 -translate-x-1/2 w-[120px] h-[37px] bg-black rounded-full z-50" />
 

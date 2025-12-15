@@ -396,10 +396,11 @@ var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
-function AppIcon({ name, icon: Icon, color, onClick, showLabel = true, badge }) {
+function AppIcon({ name, icon, color, onClick, showLabel = true, badge, iconClassName, containerClassName }) {
     _s();
     const [isPressed, setIsPressed] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isWiggling, setIsWiggling] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const IconComponent = icon;
     const handleLongPress = ()=>{
         setIsWiggling(true);
         // Haptic feedback simulation
@@ -427,22 +428,30 @@ function AppIcon({ name, icon: Icon, color, onClick, showLabel = true, badge }) 
         className: "flex flex-col items-center gap-1 group",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative w-14 h-14 rounded-2xl shadow-md flex items-center justify-center text-white transition-all duration-200", color, isPressed && "scale-90", !isPressed && "hover:scale-110", isWiggling && "animate-wiggle"),
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("relative rounded-2xl shadow-md flex items-center justify-center text-white transition-all duration-200", containerClassName ?? "w-14 h-14", color, isPressed && "scale-90", !isPressed && "hover:scale-110", isWiggling && "animate-wiggle"),
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
-                        className: "w-8 h-8",
+                    typeof icon === "string" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        src: icon,
+                        alt: `${name} icon`,
+                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-8 h-8", iconClassName)
+                    }, void 0, false, {
+                        fileName: "[project]/components/iphone/app-icon.tsx",
+                        lineNumber: 63,
+                        columnNumber: 11
+                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconComponent, {
+                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-8 h-8", iconClassName),
                         strokeWidth: 1.5
                     }, void 0, false, {
                         fileName: "[project]/components/iphone/app-icon.tsx",
-                        lineNumber: 58,
-                        columnNumber: 9
+                        lineNumber: 65,
+                        columnNumber: 11
                     }, this),
                     badge && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-[10px] font-bold text-white border-2 border-white dark:border-black animate-pulse",
                         children: badge
                     }, void 0, false, {
                         fileName: "[project]/components/iphone/app-icon.tsx",
-                        lineNumber: 61,
+                        lineNumber: 69,
                         columnNumber: 11
                     }, this),
                     isWiggling && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -450,13 +459,13 @@ function AppIcon({ name, icon: Icon, color, onClick, showLabel = true, badge }) 
                         children: "×"
                     }, void 0, false, {
                         fileName: "[project]/components/iphone/app-icon.tsx",
-                        lineNumber: 67,
+                        lineNumber: 75,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/iphone/app-icon.tsx",
-                lineNumber: 49,
+                lineNumber: 52,
                 columnNumber: 7
             }, this),
             showLabel && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -464,13 +473,13 @@ function AppIcon({ name, icon: Icon, color, onClick, showLabel = true, badge }) 
                 children: name
             }, void 0, false, {
                 fileName: "[project]/components/iphone/app-icon.tsx",
-                lineNumber: 74,
+                lineNumber: 82,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/iphone/app-icon.tsx",
-        lineNumber: 37,
+        lineNumber: 40,
         columnNumber: 5
     }, this);
 }
@@ -493,22 +502,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$status$2d$bar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/iphone/status-bar.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/iphone/app-icon.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$camera$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Camera$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/camera.js [app-client] (ecmascript) <export default as Camera>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ImageIcon$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/image.js [app-client] (ecmascript) <export default as ImageIcon>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$phone$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Phone$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/phone.js [app-client] (ecmascript) <export default as Phone>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$message$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MessageCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/message-circle.js [app-client] (ecmascript) <export default as MessageCircle>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chrome$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Chrome$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chrome.js [app-client] (ecmascript) <export default as Chrome>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shopping$2d$bag$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShoppingBag$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/shopping-bag.js [app-client] (ecmascript) <export default as ShoppingBag>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/file-text.js [app-client] (ecmascript) <export default as FileText>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$music$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Music$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/music.js [app-client] (ecmascript) <export default as Music>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$settings$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Settings$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/settings.js [app-client] (ecmascript) <export default as Settings>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/mail.js [app-client] (ecmascript) <export default as Mail>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/calendar.js [app-client] (ecmascript) <export default as Calendar>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Map$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/map.js [app-client] (ecmascript) <export default as Map>");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
-;
 ;
 ;
 ;
@@ -529,76 +525,88 @@ function HomeScreen({ isDarkMode, onAppClick }) {
         {
             id: "photos",
             name: "Photos",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ImageIcon$3e$__["ImageIcon"],
+            icon: "/photos.png",
+            iconClassName: "w-14 h-14",
             color: "bg-gradient-to-br from-red-400 to-yellow-400"
         },
         {
             id: "camera",
             name: "Camera",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$camera$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Camera$3e$__["Camera"],
+            icon: "/camera-icon.png",
+            iconClassName: "w-14 h-14",
             color: "bg-gradient-to-br from-slate-600 to-slate-800"
         },
         {
             id: "phone",
             name: "Phone",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$phone$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Phone$3e$__["Phone"],
+            icon: "/contacts-icon.svg",
+            iconClassName: "w-14 h-14",
             color: "bg-gradient-to-br from-green-400 to-green-600"
         },
         {
             id: "messages",
             name: "Messages",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$message$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MessageCircle$3e$__["MessageCircle"],
+            icon: "/message-icon.png",
+            iconClassName: "w-14 h-14",
             color: "bg-gradient-to-br from-green-400 to-green-600",
             badge: 3
         },
         {
             id: "mail",
             name: "Mail",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"],
+            icon: "/mail-icon.png",
+            iconClassName: "w-14 h-14",
             color: "bg-gradient-to-br from-blue-500 to-blue-600",
             badge: 12
         },
         {
             id: "safari",
             name: "Safari",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chrome$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Chrome$3e$__["Chrome"],
+            icon: "/safari-icon.png",
+            iconClassName: "w-14 h-14",
             color: "bg-gradient-to-br from-blue-400 to-cyan-500"
         },
         {
             id: "maps",
             name: "Maps",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Map$3e$__["Map"],
+            icon: "/maps-icon.svg",
+            iconClassName: "w-14 h-14",
             color: "bg-gradient-to-br from-green-400 to-green-600"
         },
         {
             id: "calendar",
             name: "Calendar",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"],
-            color: "bg-white dark:bg-slate-800"
+            icon: "/calendar-icon.png",
+            color: "bg-white dark:bg-slate-800",
+            iconClassName: "w-14 h-14"
         },
         {
             id: "notes",
             name: "Notes",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__["FileText"],
+            icon: "/notes-icon.png",
+            iconClassName: "w-14 h-14",
             color: "bg-gradient-to-br from-yellow-300 to-yellow-500"
         },
         {
             id: "music",
             name: "Music",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$music$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Music$3e$__["Music"],
+            icon: "/apple-music.png",
+            iconClassName: "w-14 h-14",
             color: "bg-gradient-to-br from-pink-500 to-red-500"
         },
         {
             id: "appstore",
             name: "App Store",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shopping$2d$bag$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShoppingBag$3e$__["ShoppingBag"],
+            icon: "appstore-icon.svg",
+            iconClassName: "w-14 h-14",
             color: "bg-gradient-to-br from-blue-500 to-blue-600",
             badge: 1
         },
         {
             id: "settings",
             name: "Settings",
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$settings$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Settings$3e$__["Settings"],
+            icon: "/settings-icon.png",
+            iconClassName: "w-14 h-14",
             color: "bg-gradient-to-br from-slate-600 to-slate-700"
         }
     ];
@@ -615,7 +623,7 @@ function HomeScreen({ isDarkMode, onAppClick }) {
                 isDarkMode: isDarkMode
             }, void 0, false, {
                 fileName: "[project]/components/iphone/home-screen.tsx",
-                lineNumber: 72,
+                lineNumber: 139,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -628,7 +636,7 @@ function HomeScreen({ isDarkMode, onAppClick }) {
                             children: getGreeting()
                         }, void 0, false, {
                             fileName: "[project]/components/iphone/home-screen.tsx",
-                            lineNumber: 76,
+                            lineNumber: 143,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -636,18 +644,18 @@ function HomeScreen({ isDarkMode, onAppClick }) {
                             children: "Welcome to my interactive portfolio"
                         }, void 0, false, {
                             fileName: "[project]/components/iphone/home-screen.tsx",
-                            lineNumber: 77,
+                            lineNumber: 144,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/iphone/home-screen.tsx",
-                    lineNumber: 75,
+                    lineNumber: 142,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/iphone/home-screen.tsx",
-                lineNumber: 74,
+                lineNumber: 141,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -663,26 +671,27 @@ function HomeScreen({ isDarkMode, onAppClick }) {
                                 name: app.name,
                                 icon: app.icon,
                                 color: app.color,
+                                iconClassName: app.iconClassName,
                                 onClick: ()=>onAppClick?.(app.id),
                                 badge: app.badge
                             }, void 0, false, {
                                 fileName: "[project]/components/iphone/home-screen.tsx",
-                                lineNumber: 92,
+                                lineNumber: 159,
                                 columnNumber: 15
                             }, this)
                         }, app.id, false, {
                             fileName: "[project]/components/iphone/home-screen.tsx",
-                            lineNumber: 85,
+                            lineNumber: 152,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/iphone/home-screen.tsx",
-                    lineNumber: 83,
+                    lineNumber: 150,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/iphone/home-screen.tsx",
-                lineNumber: 82,
+                lineNumber: 149,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -694,63 +703,66 @@ function HomeScreen({ isDarkMode, onAppClick }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 name: "Phone",
-                                icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$phone$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Phone$3e$__["Phone"],
+                                icon: "/phone-icon.png",
+                                iconClassName: "w-14 h-14",
                                 color: "bg-gradient-to-br from-green-400 to-green-600",
                                 showLabel: false,
                                 onClick: ()=>onAppClick?.("phone")
                             }, void 0, false, {
                                 fileName: "[project]/components/iphone/home-screen.tsx",
-                                lineNumber: 108,
+                                lineNumber: 177,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 name: "Safari",
-                                icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chrome$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Chrome$3e$__["Chrome"],
+                                icon: "/message-icon.png",
+                                iconClassName: "w-14 h-14",
                                 color: "bg-gradient-to-br from-blue-400 to-cyan-500",
                                 showLabel: false,
                                 onClick: ()=>onAppClick?.("safari")
                             }, void 0, false, {
                                 fileName: "[project]/components/iphone/home-screen.tsx",
-                                lineNumber: 115,
+                                lineNumber: 185,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 name: "Messages",
-                                icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$message$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MessageCircle$3e$__["MessageCircle"],
+                                icon: "/message-icon.png",
+                                iconClassName: "w-14 h-14",
                                 color: "bg-gradient-to-br from-green-400 to-green-600",
                                 showLabel: false,
                                 onClick: ()=>onAppClick?.("messages"),
                                 badge: 3
                             }, void 0, false, {
                                 fileName: "[project]/components/iphone/home-screen.tsx",
-                                lineNumber: 122,
+                                lineNumber: 193,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 name: "Music",
-                                icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$music$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Music$3e$__["Music"],
+                                icon: "/icon-dark-32x32.png",
                                 color: "bg-gradient-to-br from-pink-500 to-red-500",
                                 showLabel: false,
                                 onClick: ()=>onAppClick?.("music")
                             }, void 0, false, {
                                 fileName: "[project]/components/iphone/home-screen.tsx",
-                                lineNumber: 130,
+                                lineNumber: 202,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/iphone/home-screen.tsx",
-                        lineNumber: 107,
+                        lineNumber: 175,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/iphone/home-screen.tsx",
-                    lineNumber: 106,
+                    lineNumber: 174,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/iphone/home-screen.tsx",
-                lineNumber: 105,
+                lineNumber: 173,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -760,26 +772,26 @@ function HomeScreen({ isDarkMode, onAppClick }) {
                         className: "w-2 h-2 rounded-full bg-foreground"
                     }, void 0, false, {
                         fileName: "[project]/components/iphone/home-screen.tsx",
-                        lineNumber: 143,
+                        lineNumber: 215,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-2 h-2 rounded-full bg-foreground/30"
                     }, void 0, false, {
                         fileName: "[project]/components/iphone/home-screen.tsx",
-                        lineNumber: 144,
+                        lineNumber: 216,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/iphone/home-screen.tsx",
-                lineNumber: 142,
+                lineNumber: 214,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/iphone/home-screen.tsx",
-        lineNumber: 71,
+        lineNumber: 138,
         columnNumber: 5
     }, this);
 }
@@ -916,7 +928,7 @@ function IPhoneFrame({ children, isDarkMode, setIsDarkMode }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative w-[363px] h-[852px] max-h-[95vh] aspect-[363/852] bg-[#1d1d1f] rounded-[55px] p-3 shadow-2xl scale-[0.85] md:scale-100",
+                className: "relative w-[353px] h-[852px] max-h-[95vh] aspect-[353/852] bg-[#1d1d1f] rounded-[55px] p-3 shadow-2xl scale-[0.85] md:scale-100",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute top-6 left-1/2 -translate-x-1/2 w-[120px] h-[37px] bg-black rounded-full z-50"
@@ -1006,7 +1018,7 @@ const photoAlbums = [
     {
         id: "personal",
         name: "Personal",
-        count: 127,
+        count: 12,
         thumbnail: "/professional-portrait.jpg"
     },
     {
@@ -1028,6 +1040,77 @@ const photoAlbums = [
         thumbnail: "/ui-ux-design-mockup.png"
     }
 ];
+// Personal Album Photos
+const personalPhotos = [
+    {
+        id: 1,
+        url: "/professional-portrait.jpg"
+    },
+    {
+        id: 2,
+        url: "/professional-portrait.png"
+    },
+    {
+        id: 3,
+        url: "/placeholder-user.jpg"
+    },
+    {
+        id: 4,
+        url: "/beautiful-mountain-landscape.png"
+    },
+    {
+        id: 5,
+        url: "/web-development-coding-screen.png"
+    },
+    {
+        id: 6,
+        url: "/ui-ux-design-mockup.png"
+    },
+    {
+        id: 7,
+        url: "/task-management-dashboard.png"
+    },
+    {
+        id: 8,
+        url: "/ecommerce-product-grid.png"
+    },
+    {
+        id: 9,
+        url: "/ai-chat-interface.png"
+    },
+    {
+        id: 10,
+        url: "/team-analytics-chart.jpg"
+    },
+    {
+        id: 11,
+        url: "/project-kanban-board.jpg"
+    },
+    {
+        id: 12,
+        url: "/ai-settings-panel.jpg"
+    }
+];
+// Projects Album Photos
+const projectsPhotos = Array.from({
+    length: 12
+}, (_, i)=>({
+        id: i,
+        url: [
+            "/web-development-coding-screen.png",
+            "/ui-ux-design-mockup.png",
+            "/task-management-dashboard.png",
+            "/ecommerce-product-grid.png",
+            "/ai-chat-interface.png",
+            "/team-analytics-chart.jpg",
+            "/project-kanban-board.jpg",
+            "/ai-settings-panel.jpg",
+            "/shopping-cart-checkout.jpg",
+            "/order-dashboard.jpg",
+            "/chatbot-conversation.jpg",
+            "/placeholder.jpg"
+        ][i] || "/placeholder.svg"
+    }));
 const recentPhotos = Array.from({
     length: 12
 }, (_, i)=>({
@@ -1059,6 +1142,18 @@ function PhotosApp({ onClose, isDarkMode }) {
         setView("albums");
         setSelectedAlbum(null);
     };
+    // Get photos for selected album
+    const getAlbumPhotos = ()=>{
+        switch(selectedAlbum){
+            case "Personal":
+                return personalPhotos;
+            case "Projects":
+                return projectsPhotos;
+            default:
+                return recentPhotos;
+        }
+    };
+    const currentPhotos = view === "photos" ? getAlbumPhotos() : recentPhotos;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full h-full bg-background flex flex-col animate-zoom-in",
         children: [
@@ -1075,20 +1170,20 @@ function PhotosApp({ onClose, isDarkMode }) {
                                 className: "w-5 h-5"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 79,
+                                lineNumber: 128,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: view === "photos" ? "Albums" : "Home"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 80,
+                                lineNumber: 129,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/photos-app.tsx",
-                        lineNumber: 78,
+                        lineNumber: 127,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1096,7 +1191,7 @@ function PhotosApp({ onClose, isDarkMode }) {
                         children: view === "albums" ? "Photos" : selectedAlbum
                     }, void 0, false, {
                         fileName: "[project]/components/apps/photos-app.tsx",
-                        lineNumber: 82,
+                        lineNumber: 131,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1106,18 +1201,18 @@ function PhotosApp({ onClose, isDarkMode }) {
                             className: "w-5 h-5"
                         }, void 0, false, {
                             fileName: "[project]/components/apps/photos-app.tsx",
-                            lineNumber: 84,
+                            lineNumber: 133,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/apps/photos-app.tsx",
-                        lineNumber: 83,
+                        lineNumber: 132,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/apps/photos-app.tsx",
-                lineNumber: 77,
+                lineNumber: 126,
                 columnNumber: 7
             }, this),
             view === "albums" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1134,7 +1229,7 @@ function PhotosApp({ onClose, isDarkMode }) {
                                         children: "My Albums"
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/photos-app.tsx",
-                                        lineNumber: 93,
+                                        lineNumber: 142,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1144,13 +1239,13 @@ function PhotosApp({ onClose, isDarkMode }) {
                                         children: "See All"
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/photos-app.tsx",
-                                        lineNumber: 94,
+                                        lineNumber: 143,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 92,
+                                lineNumber: 141,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1165,14 +1260,14 @@ function PhotosApp({ onClose, isDarkMode }) {
                                                 className: "w-full h-full object-cover"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                                lineNumber: 106,
+                                                lineNumber: 155,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                                lineNumber: 111,
+                                                lineNumber: 160,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1183,7 +1278,7 @@ function PhotosApp({ onClose, isDarkMode }) {
                                                         children: album.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/photos-app.tsx",
-                                                        lineNumber: 113,
+                                                        lineNumber: 162,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1194,30 +1289,30 @@ function PhotosApp({ onClose, isDarkMode }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/apps/photos-app.tsx",
-                                                        lineNumber: 114,
+                                                        lineNumber: 163,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                                lineNumber: 112,
+                                                lineNumber: 161,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, album.id, true, {
                                         fileName: "[project]/components/apps/photos-app.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 150,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 99,
+                                lineNumber: 148,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/photos-app.tsx",
-                        lineNumber: 91,
+                        lineNumber: 140,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1230,7 +1325,7 @@ function PhotosApp({ onClose, isDarkMode }) {
                                         children: "Recent"
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/photos-app.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 173,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1240,18 +1335,18 @@ function PhotosApp({ onClose, isDarkMode }) {
                                             className: "w-5 h-5"
                                         }, void 0, false, {
                                             fileName: "[project]/components/apps/photos-app.tsx",
-                                            lineNumber: 126,
+                                            lineNumber: 175,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/photos-app.tsx",
-                                        lineNumber: 125,
+                                        lineNumber: 174,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 123,
+                                lineNumber: 172,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1264,35 +1359,35 @@ function PhotosApp({ onClose, isDarkMode }) {
                                             className: "w-full h-full object-cover"
                                         }, void 0, false, {
                                             fileName: "[project]/components/apps/photos-app.tsx",
-                                            lineNumber: 133,
+                                            lineNumber: 182,
                                             columnNumber: 19
                                         }, this)
                                     }, photo.id, false, {
                                         fileName: "[project]/components/apps/photos-app.tsx",
-                                        lineNumber: 132,
+                                        lineNumber: 181,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 130,
+                                lineNumber: 179,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/photos-app.tsx",
-                        lineNumber: 122,
+                        lineNumber: 171,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/apps/photos-app.tsx",
-                lineNumber: 89,
+                lineNumber: 138,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex-1 overflow-y-auto",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "grid grid-cols-3 gap-1 p-1",
-                    children: recentPhotos.map((photo)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    children: currentPhotos.map((photo)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             className: "aspect-square relative group",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -1301,30 +1396,30 @@ function PhotosApp({ onClose, isDarkMode }) {
                                     className: "w-full h-full object-cover"
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/photos-app.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 198,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/photos-app.tsx",
-                                    lineNumber: 154,
+                                    lineNumber: 203,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, photo.id, true, {
                             fileName: "[project]/components/apps/photos-app.tsx",
-                            lineNumber: 148,
+                            lineNumber: 197,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/apps/photos-app.tsx",
-                    lineNumber: 146,
+                    lineNumber: 195,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/apps/photos-app.tsx",
-                lineNumber: 144,
+                lineNumber: 193,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1339,7 +1434,7 @@ function PhotosApp({ onClose, isDarkMode }) {
                                 className: "w-5 h-5"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 164,
+                                lineNumber: 213,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1347,13 +1442,13 @@ function PhotosApp({ onClose, isDarkMode }) {
                                 children: "Library"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 165,
+                                lineNumber: 214,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/photos-app.tsx",
-                        lineNumber: 163,
+                        lineNumber: 212,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1365,7 +1460,7 @@ function PhotosApp({ onClose, isDarkMode }) {
                                 className: "w-5 h-5"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 168,
+                                lineNumber: 217,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1373,13 +1468,13 @@ function PhotosApp({ onClose, isDarkMode }) {
                                 children: "Search"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 169,
+                                lineNumber: 218,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/photos-app.tsx",
-                        lineNumber: 167,
+                        lineNumber: 216,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1391,7 +1486,7 @@ function PhotosApp({ onClose, isDarkMode }) {
                                 className: "w-5 h-5"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 172,
+                                lineNumber: 221,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1399,13 +1494,13 @@ function PhotosApp({ onClose, isDarkMode }) {
                                 children: "Add"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 173,
+                                lineNumber: 222,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/photos-app.tsx",
-                        lineNumber: 171,
+                        lineNumber: 220,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1417,7 +1512,7 @@ function PhotosApp({ onClose, isDarkMode }) {
                                 className: "w-5 h-5"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 176,
+                                lineNumber: 225,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1425,25 +1520,25 @@ function PhotosApp({ onClose, isDarkMode }) {
                                 children: "Favorites"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/photos-app.tsx",
-                                lineNumber: 177,
+                                lineNumber: 226,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/photos-app.tsx",
-                        lineNumber: 175,
+                        lineNumber: 224,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/apps/photos-app.tsx",
-                lineNumber: 162,
+                lineNumber: 211,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/apps/photos-app.tsx",
-        lineNumber: 75,
+        lineNumber: 124,
         columnNumber: 5
     }, this);
 }

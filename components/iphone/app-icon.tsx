@@ -6,16 +6,19 @@ import { cn } from "@/lib/utils"
 
 interface AppIconProps {
   name: string
-  icon: LucideIcon
+  icon: LucideIcon | string
   color: string
   onClick?: () => void
   showLabel?: boolean
   badge?: number
+  iconClassName?: string
+  containerClassName?: string
 }
 
-export default function AppIcon({ name, icon: Icon, color, onClick, showLabel = true, badge }: AppIconProps) {
+export default function AppIcon({ name, icon, color, onClick, showLabel = true, badge, iconClassName, containerClassName }: AppIconProps) {
   const [isPressed, setIsPressed] = useState(false)
   const [isWiggling, setIsWiggling] = useState(false)
+  const IconComponent = icon as LucideIcon
 
   const handleLongPress = () => {
     setIsWiggling(true)
@@ -48,14 +51,19 @@ export default function AppIcon({ name, icon: Icon, color, onClick, showLabel = 
     >
       <div
         className={cn(
-          "relative w-14 h-14 rounded-2xl shadow-md flex items-center justify-center text-white transition-all duration-200",
+          "relative rounded-2xl shadow-md flex items-center justify-center text-white transition-all duration-200",
+          containerClassName ?? "w-14 h-14",
           color,
           isPressed && "scale-90",
           !isPressed && "hover:scale-110",
           isWiggling && "animate-wiggle",
         )}
       >
-        <Icon className="w-8 h-8" strokeWidth={1.5} />
+        {typeof icon === "string" ? (
+          <img src={icon} alt={`${name} icon`} className={cn("w-8 h-8", iconClassName)} />
+        ) : (
+          <IconComponent className={cn("w-8 h-8", iconClassName)} strokeWidth={1.5} />
+        )}
 
         {badge && (
           <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-[10px] font-bold text-white border-2 border-white dark:border-black animate-pulse">

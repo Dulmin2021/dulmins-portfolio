@@ -13,7 +13,7 @@ const photoAlbums = [
   {
     id: "personal",
     name: "Personal",
-    count: 127,
+    count: 12,
     thumbnail: "/professional-portrait.jpg",
   },
   
@@ -36,6 +36,41 @@ const photoAlbums = [
     thumbnail: "/ui-ux-design-mockup.png",
   },
 ]
+
+// Personal Album Photos
+const personalPhotos = [
+  { id: 1, url: "/professional-portrait.jpg" },
+  { id: 2, url: "/professional-portrait.png" },
+  { id: 3, url: "/placeholder-user.jpg" },
+  { id: 4, url: "/beautiful-mountain-landscape.png" },
+  { id: 5, url: "/web-development-coding-screen.png" },
+  { id: 6, url: "/ui-ux-design-mockup.png" },
+  { id: 7, url: "/task-management-dashboard.png" },
+  { id: 8, url: "/ecommerce-product-grid.png" },
+  { id: 9, url: "/ai-chat-interface.png" },
+  { id: 10, url: "/team-analytics-chart.jpg" },
+  { id: 11, url: "/project-kanban-board.jpg" },
+  { id: 12, url: "/ai-settings-panel.jpg" },
+]
+
+// Projects Album Photos
+const projectsPhotos = Array.from({ length: 12 }, (_, i) => ({
+  id: i,
+  url: [
+    "/web-development-coding-screen.png",
+    "/ui-ux-design-mockup.png",
+    "/task-management-dashboard.png",
+    "/ecommerce-product-grid.png",
+    "/ai-chat-interface.png",
+    "/team-analytics-chart.jpg",
+    "/project-kanban-board.jpg",
+    "/ai-settings-panel.jpg",
+    "/shopping-cart-checkout.jpg",
+    "/order-dashboard.jpg",
+    "/chatbot-conversation.jpg",
+    "/placeholder.jpg",
+  ][i] || "/placeholder.svg",
+}))
 
 const recentPhotos = Array.from({ length: 12 }, (_, i) => ({
   id: i,
@@ -70,6 +105,20 @@ export default function PhotosApp({ onClose, isDarkMode }: PhotosAppProps) {
     setView("albums")
     setSelectedAlbum(null)
   }
+
+  // Get photos for selected album
+  const getAlbumPhotos = () => {
+    switch (selectedAlbum) {
+      case "Personal":
+        return personalPhotos
+      case "Projects":
+        return projectsPhotos
+      default:
+        return recentPhotos
+    }
+  }
+
+  const currentPhotos = view === "photos" ? getAlbumPhotos() : recentPhotos
 
   return (
     <div className="w-full h-full bg-background flex flex-col animate-zoom-in">
@@ -144,7 +193,7 @@ export default function PhotosApp({ onClose, isDarkMode }: PhotosAppProps) {
         <div className="flex-1 overflow-y-auto">
           {/* Album View */}
           <div className="grid grid-cols-3 gap-1 p-1">
-            {recentPhotos.map((photo) => (
+            {currentPhotos.map((photo) => (
               <button key={photo.id} className="aspect-square relative group">
                 <img
                   src={photo.url || "/placeholder.svg"}

@@ -32,32 +32,99 @@ export default function HomeScreen({ isDarkMode, onAppClick }: HomeScreenProps) 
   }, [])
 
   const apps = [
-    { id: "photos", name: "Photos", icon: ImageIcon, color: "bg-gradient-to-br from-red-400 to-yellow-400" },
-    { id: "camera", name: "Camera", icon: Camera, color: "bg-gradient-to-br from-slate-600 to-slate-800" },
-    { id: "phone", name: "Phone", icon: Phone, color: "bg-gradient-to-br from-green-400 to-green-600" },
+    { 
+      id: "photos",
+      name: "Photos",
+      icon: "/photos.png",
+      iconClassName: "w-14 h-14",
+      color: "bg-gradient-to-br from-red-400 to-yellow-400"
+    },
+
+    { 
+      id: "camera",
+      name: "Camera",
+      icon: "/camera-icon.png",
+      iconClassName: "w-14 h-14",
+      color: "bg-gradient-to-br from-slate-600 to-slate-800" 
+    },
+
+    { 
+      id: "phone",
+      name: "Phone",
+      icon: "/contacts-icon.svg",
+      iconClassName: "w-14 h-14",
+      color: "bg-gradient-to-br from-green-400 to-green-600"
+     },
+
     {
       id: "messages",
       name: "Messages",
-      icon: MessageCircle,
+      icon: "/message-icon.png",
+      iconClassName: "w-14 h-14",
       color: "bg-gradient-to-br from-green-400 to-green-600",
       badge: 3,
     },
 
-    { id: "mail", name: "Mail", icon: Mail, color: "bg-gradient-to-br from-blue-500 to-blue-600", badge: 12 },
-    { id: "safari", name: "Safari", icon: Chrome, color: "bg-gradient-to-br from-blue-400 to-cyan-500" },
-    { id: "maps", name: "Maps", icon: Map, color: "bg-gradient-to-br from-green-400 to-green-600" },
-    { id: "calendar", name: "Calendar", icon: Calendar, color: "bg-white dark:bg-slate-800" },
-
-    { id: "notes", name: "Notes", icon: FileText, color: "bg-gradient-to-br from-yellow-300 to-yellow-500" },
-    { id: "music", name: "Music", icon: Music, color: "bg-gradient-to-br from-pink-500 to-red-500" },
     {
-      id: "appstore",
-      name: "App Store",
-      icon: ShoppingBag,
+      id: "mail",
+      name: "Mail",
+      icon: "/mail-icon.png",
+      iconClassName: "w-14 h-14",
+      color: "bg-gradient-to-br from-blue-500 to-blue-600",
+      badge: 12,
+    },
+
+    { 
+      id: "safari",
+      name: "Safari",
+      icon: "/safari-icon.png",
+      iconClassName: "w-14 h-14",
+      color: "bg-gradient-to-br from-blue-400 to-cyan-500"
+    },
+
+    { 
+      id: "maps",
+      name: "Maps",
+      icon: "/maps-icon.svg",
+      iconClassName: "w-14 h-14",
+      color: "bg-gradient-to-br from-green-400 to-green-600"
+     },
+
+    { 
+      id: "calendar", 
+      name: "Calendar", 
+      icon: "/calendar-icon.png", 
+      color: "bg-white dark:bg-slate-800",
+      iconClassName: "w-14 h-14" },
+
+    { id: "notes", 
+      name: "Notes", 
+      icon: "/notes-icon.png", 
+      iconClassName: "w-14 h-14",
+      color: "bg-gradient-to-br from-yellow-300 to-yellow-500" },
+
+    { 
+      id: "music", 
+      name: "Music", 
+      icon: "/apple-music.png",
+      iconClassName: "w-14 h-14",
+      color: "bg-gradient-to-br from-pink-500 to-red-500" },
+      {
+        id: "appstore",
+        name: "App Store",
+        icon: "appstore-icon.svg",
+        iconClassName: "w-14 h-14",
       color: "bg-gradient-to-br from-blue-500 to-blue-600",
       badge: 1,
     },
-    { id: "settings", name: "Settings", icon: Settings, color: "bg-gradient-to-br from-slate-600 to-slate-700" },
+    
+    { 
+      id: "settings", 
+      name: "Settings", 
+      icon: "/settings-icon.png",
+      iconClassName: "w-14 h-14", 
+      color: "bg-gradient-to-br from-slate-600 to-slate-700" 
+    },
   ]
 
   const getGreeting = () => {
@@ -93,6 +160,7 @@ export default function HomeScreen({ isDarkMode, onAppClick }: HomeScreenProps) 
                 name={app.name}
                 icon={app.icon}
                 color={app.color}
+                iconClassName={app.iconClassName}
                 onClick={() => onAppClick?.(app.id)}
                 badge={app.badge}
               />
@@ -105,23 +173,27 @@ export default function HomeScreen({ isDarkMode, onAppClick }: HomeScreenProps) 
       <div className="absolute bottom-6 left-6 right-6">
         <div className="glass-effect rounded-3xl p-4 shadow-lg border border-white/20 dark:border-white/10 animate-slide-up">
           <div className="grid grid-cols-4 gap-4">
+
             <AppIcon
               name="Phone"
-              icon={Phone}
+              icon="/phone-icon.png"
+              iconClassName="w-14 h-14"
               color="bg-gradient-to-br from-green-400 to-green-600"
               showLabel={false}
               onClick={() => onAppClick?.("phone")}
             />
             <AppIcon
               name="Safari"
-              icon={Chrome}
+              icon= "/message-icon.png"
+              iconClassName="w-14 h-14"
               color="bg-gradient-to-br from-blue-400 to-cyan-500"
               showLabel={false}
               onClick={() => onAppClick?.("safari")}
             />
             <AppIcon
               name="Messages"
-              icon={MessageCircle}
+              icon="/message-icon.png"
+              iconClassName="w-14 h-14"
               color="bg-gradient-to-br from-green-400 to-green-600"
               showLabel={false}
               onClick={() => onAppClick?.("messages")}
@@ -129,7 +201,7 @@ export default function HomeScreen({ isDarkMode, onAppClick }: HomeScreenProps) 
             />
             <AppIcon
               name="Music"
-              icon={Music}
+              icon="/icon-dark-32x32.png"
               color="bg-gradient-to-br from-pink-500 to-red-500"
               showLabel={false}
               onClick={() => onAppClick?.("music")}
