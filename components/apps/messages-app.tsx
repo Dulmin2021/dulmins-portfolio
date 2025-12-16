@@ -30,7 +30,7 @@ const initialMessages: Message[] = [
      timestamp: "10:31 AM" },
   {
     id: 3,
-    text: "I'm a full-stack developer with expertise in React, Next.js, TypeScript, and Node.js. I love building interactive and performant web applications!",
+    text: "I am a Motivated and passionate Computer Science undergraduate seeking a hands-on Internship to apply and expand my knowledge in DevOps practices.",
     sender: "me",
     timestamp: "10:32 AM",
   },
@@ -40,7 +40,7 @@ const initialMessages: Message[] = [
     timestamp: "10:33 AM" },
   {
     id: 5,
-    text: "I've built e-commerce platforms, SaaS applications, portfolio sites, and AI-powered tools. Check out the App Store app to see my project showcase!",
+    text: "I've built a todo app with docker, a youtube downloader, and a linux based system moonitor. Check out the App Store app to see my feature project showcase!",
     sender: "me",
     timestamp: "10:34 AM",
   },

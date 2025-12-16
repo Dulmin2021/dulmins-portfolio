@@ -8,9 +8,10 @@ import { ChevronUp } from "lucide-react"
 interface LockScreenProps {
   onUnlock: () => void
   isDarkMode: boolean
+  signalStrength?: number
 }
 
-export default function LockScreen({ onUnlock, isDarkMode }: LockScreenProps) {
+export default function LockScreen({ onUnlock, isDarkMode, signalStrength = 4 }: LockScreenProps) {
   const [time, setTime] = useState<Date | null>(null)
   const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)
@@ -84,10 +85,12 @@ export default function LockScreen({ onUnlock, isDarkMode }: LockScreenProps) {
         <span>9:41</span>
         <div className="flex items-center gap-1">
           <div className="flex gap-0.5">
-            <div className="w-0.5 h-2 bg-white rounded-full" />
-            <div className="w-0.5 h-3 bg-white rounded-full" />
-            <div className="w-0.5 h-3.5 bg-white rounded-full" />
-            <div className="w-0.5 h-4 bg-white rounded-full" />
+            {(["h-2", "h-3", "h-3.5", "h-4"] as const).map((h, i) => (
+              <div
+                key={i}
+                className={`w-0.5 ${h} rounded-full ${i < signalStrength ? "bg-white" : "bg-white/40"}`}
+              />
+            ))}
           </div>
           <span className="ml-1">100%</span>
         </div>

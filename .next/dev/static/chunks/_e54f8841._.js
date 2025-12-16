@@ -14,7 +14,7 @@ var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
-function LockScreen({ onUnlock, isDarkMode }) {
+function LockScreen({ onUnlock, isDarkMode, signalStrength = 4 }) {
     _s();
     const [time, setTime] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [touchStart, setTouchStart] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
@@ -81,20 +81,20 @@ function LockScreen({ onUnlock, isDarkMode }) {
                         className: "absolute inset-0 bg-[url('/wallpaper.jpeg')] bg-cover bg-center"
                     }, void 0, false, {
                         fileName: "[project]/components/iphone/lock-screen.tsx",
-                        lineNumber: 77,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-black/30 dark:bg-black/45 backdrop-blur-sm"
                     }, void 0, false, {
                         fileName: "[project]/components/iphone/lock-screen.tsx",
-                        lineNumber: 78,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/iphone/lock-screen.tsx",
-                lineNumber: 76,
+                lineNumber: 77,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -107,7 +107,7 @@ function LockScreen({ onUnlock, isDarkMode }) {
                                 children: "9:41"
                             }, void 0, false, {
                                 fileName: "[project]/components/iphone/lock-screen.tsx",
-                                lineNumber: 84,
+                                lineNumber: 85,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -116,38 +116,20 @@ function LockScreen({ onUnlock, isDarkMode }) {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex gap-0.5",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-0.5 h-2 bg-white rounded-full"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/iphone/lock-screen.tsx",
-                                                lineNumber: 87,
-                                                columnNumber: 13
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-0.5 h-3 bg-white rounded-full"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/iphone/lock-screen.tsx",
-                                                lineNumber: 88,
-                                                columnNumber: 13
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-0.5 h-3.5 bg-white rounded-full"
-                                            }, void 0, false, {
+                                            "h-2",
+                                            "h-3",
+                                            "h-3.5",
+                                            "h-4"
+                                        ].map((h, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: `w-0.5 ${h} rounded-full ${i < signalStrength ? "bg-white" : "bg-white/40"}`
+                                            }, i, false, {
                                                 fileName: "[project]/components/iphone/lock-screen.tsx",
                                                 lineNumber: 89,
-                                                columnNumber: 13
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-0.5 h-4 bg-white rounded-full"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/iphone/lock-screen.tsx",
-                                                lineNumber: 90,
-                                                columnNumber: 13
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
+                                                columnNumber: 15
+                                            }, this))
+                                    }, void 0, false, {
                                         fileName: "[project]/components/iphone/lock-screen.tsx",
-                                        lineNumber: 86,
+                                        lineNumber: 87,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -155,19 +137,19 @@ function LockScreen({ onUnlock, isDarkMode }) {
                                         children: "100%"
                                     }, void 0, false, {
                                         fileName: "[project]/components/iphone/lock-screen.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 95,
                                         columnNumber: 11
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/iphone/lock-screen.tsx",
-                                lineNumber: 85,
+                                lineNumber: 86,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/iphone/lock-screen.tsx",
-                        lineNumber: 83,
+                        lineNumber: 84,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -180,7 +162,7 @@ function LockScreen({ onUnlock, isDarkMode }) {
                                     children: formatTime(time)
                                 }, void 0, false, {
                                     fileName: "[project]/components/iphone/lock-screen.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 102,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -191,18 +173,18 @@ function LockScreen({ onUnlock, isDarkMode }) {
                                     children: formatDate(time)
                                 }, void 0, false, {
                                     fileName: "[project]/components/iphone/lock-screen.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 103,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/iphone/lock-screen.tsx",
-                            lineNumber: 98,
+                            lineNumber: 101,
                             columnNumber: 9
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/iphone/lock-screen.tsx",
-                        lineNumber: 97,
+                        lineNumber: 100,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -216,7 +198,7 @@ function LockScreen({ onUnlock, isDarkMode }) {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/components/iphone/lock-screen.tsx",
-                                lineNumber: 108,
+                                lineNumber: 111,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -226,38 +208,38 @@ function LockScreen({ onUnlock, isDarkMode }) {
                                         className: "w-5 h-5"
                                     }, void 0, false, {
                                         fileName: "[project]/components/iphone/lock-screen.tsx",
-                                        lineNumber: 116,
+                                        lineNumber: 119,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Swipe up to unlock"
                                     }, void 0, false, {
                                         fileName: "[project]/components/iphone/lock-screen.tsx",
-                                        lineNumber: 117,
+                                        lineNumber: 120,
                                         columnNumber: 11
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/iphone/lock-screen.tsx",
-                                lineNumber: 115,
+                                lineNumber: 118,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/iphone/lock-screen.tsx",
-                        lineNumber: 107,
+                        lineNumber: 110,
                         columnNumber: 7
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/iphone/lock-screen.tsx",
-                lineNumber: 81,
+                lineNumber: 82,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/iphone/lock-screen.tsx",
-        lineNumber: 65,
+        lineNumber: 66,
         columnNumber: 5
     }, this);
 }
@@ -2171,7 +2153,7 @@ const initialMessages = [
     },
     {
         id: 3,
-        text: "I'm a full-stack developer with expertise in React, Next.js, TypeScript, and Node.js. I love building interactive and performant web applications!",
+        text: "I am a Motivated and passionate Computer Science undergraduate seeking a hands-on Internship to apply and expand my knowledge in DevOps practices.",
         sender: "me",
         timestamp: "10:32 AM"
     },
@@ -2183,7 +2165,7 @@ const initialMessages = [
     },
     {
         id: 5,
-        text: "I've built e-commerce platforms, SaaS applications, portfolio sites, and AI-powered tools. Check out the App Store app to see my project showcase!",
+        text: "I've built a todo app with docker, a youtube downloader, and a linux based system moonitor. Check out the App Store app to see my feature project showcase!",
         sender: "me",
         timestamp: "10:34 AM"
     },
@@ -4949,7 +4931,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-lg font-semibold",
+                        className: "text-lg font-semibold text-foreground",
                         children: "Settings"
                     }, void 0, false, {
                         fileName: "[project]/components/apps/settings-app.tsx",
@@ -5004,7 +4986,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                 className: "flex-1 text-left",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-xl font-bold",
+                                        className: "text-xl font-bold text-foreground",
                                         children: "Dulmin wickramage"
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/settings-app.tsx",
@@ -5042,7 +5024,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                         className: "p-6 border-b border-border",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "text-lg font-semibold mb-4",
+                                className: "text-lg font-semibold mb-4 text-foreground",
                                 children: "Appearance"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
@@ -5071,7 +5053,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "font-medium",
+                                                        className: "font-medium text-foreground",
                                                         children: "Dark Mode"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
@@ -5122,7 +5104,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                         className: "p-6 border-b border-border",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "text-lg font-semibold mb-4",
+                                className: "text-lg font-semibold mb-4 text-foreground",
                                 children: "Portfolio"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
@@ -5150,7 +5132,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         className: "text-left",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "font-medium",
+                                                                className: "font-medium text-foreground",
                                                                 children: "Download Resume"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
@@ -5207,7 +5189,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         className: "text-left",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "font-medium",
+                                                                className: "font-medium text-foreground",
                                                                 children: "Notifications"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
@@ -5263,7 +5245,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                         className: "p-6 border-b border-border",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "text-lg font-semibold mb-4",
+                                className: "text-lg font-semibold mb-4 text-foreground",
                                 children: "About"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
@@ -5290,7 +5272,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         className: "text-left",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "font-medium",
+                                                                className: "font-medium text-foreground",
                                                                 children: "Professional Info"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
@@ -5344,7 +5326,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "font-medium",
+                                                        className: "font-medium text-foreground",
                                                         children: "Device Info"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
@@ -5407,7 +5389,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "font-medium",
+                                                        className: "font-medium text-foreground",
                                                         children: "Software Update"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
