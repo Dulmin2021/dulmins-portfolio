@@ -63,7 +63,7 @@ export default function LockScreen({ onUnlock, isDarkMode }: LockScreenProps) {
 
   return (
     <div
-      className="relative w-full h-full bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 dark:from-blue-900 dark:via-purple-900 dark:to-pink-900 flex flex-col items-center justify-between px-6 py-12 cursor-pointer transition-all duration-500 animate-fade-in"
+      className="relative w-full h-full overflow-hidden flex flex-col items-center justify-between px-6 py-12 cursor-pointer transition-all duration-500 animate-fade-in"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -72,6 +72,13 @@ export default function LockScreen({ onUnlock, isDarkMode }: LockScreenProps) {
         opacity: 1 - swipeProgress / 100,
       }}
     >
+      {/* Wallpaper layer */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[url('/wallpaper.jpeg')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-black/30 dark:bg-black/45 backdrop-blur-sm" />
+      </div>
+
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-between">
       {/* Status Bar */}
       <div className="w-full flex justify-between items-center text-white text-xs font-medium px-2">
         <span>9:41</span>
@@ -109,6 +116,7 @@ export default function LockScreen({ onUnlock, isDarkMode }: LockScreenProps) {
           <ChevronUp className="w-5 h-5" />
           <span>Swipe up to unlock</span>
         </div>
+      </div>
       </div>
     </div>
   )

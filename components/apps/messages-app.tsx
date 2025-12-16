@@ -19,25 +19,37 @@ interface MessagesAppProps {
 }
 
 const initialMessages: Message[] = [
-  { id: 1, text: "Hey! Thanks for checking out my portfolio!", sender: "me", timestamp: "10:30 AM" },
-  { id: 2, text: "Tell me about your skills!", sender: "user", timestamp: "10:31 AM" },
+  { id: 1, 
+    text: "Hey! Thanks for checking out my portfolio!", 
+    sender: "me", 
+    timestamp: "10:30 AM" },
+
+  { id: 2,
+     text: "Tell me about your skills!", 
+     sender: "user", 
+     timestamp: "10:31 AM" },
   {
     id: 3,
     text: "I'm a full-stack developer with expertise in React, Next.js, TypeScript, and Node.js. I love building interactive and performant web applications!",
     sender: "me",
     timestamp: "10:32 AM",
   },
-  { id: 4, text: "What kind of projects have you worked on?", sender: "user", timestamp: "10:33 AM" },
+  { id: 4, 
+    text: "What kind of projects have you worked on?", 
+    sender: "user", 
+    timestamp: "10:33 AM" },
   {
     id: 5,
     text: "I've built e-commerce platforms, SaaS applications, portfolio sites, and AI-powered tools. Check out the App Store app to see my project showcase!",
     sender: "me",
     timestamp: "10:34 AM",
   },
-  { id: 6, text: "Impressive! How can I get in touch?", sender: "user", timestamp: "10:35 AM" },
+  { id: 6, text: "Impressive! How can I get in touch?", 
+    sender: "user", 
+    timestamp: "10:35 AM" },
   {
     id: 7,
-    text: "You can reach me via email at john@example.com or check my LinkedIn and GitHub in the Phone app!",
+    text: "You can reach me via email at dulmin.code@gmail.com or check my LinkedIn and GitHub in the Phone app!",
     sender: "me",
     timestamp: "10:36 AM",
   },

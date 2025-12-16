@@ -65,7 +65,7 @@ function LockScreen({ onUnlock, isDarkMode }) {
         });
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative w-full h-full bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 dark:from-blue-900 dark:via-purple-900 dark:to-pink-900 flex flex-col items-center justify-between px-6 py-12 cursor-pointer transition-all duration-500 animate-fade-in",
+        className: "relative w-full h-full overflow-hidden flex flex-col items-center justify-between px-6 py-12 cursor-pointer transition-all duration-500 animate-fade-in",
         onTouchStart: handleTouchStart,
         onTouchMove: handleTouchMove,
         onTouchEnd: handleTouchEnd,
@@ -75,65 +75,18 @@ function LockScreen({ onUnlock, isDarkMode }) {
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-full flex justify-between items-center text-white text-xs font-medium px-2",
+                className: "absolute inset-0 z-0 pointer-events-none",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        children: "9:41"
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 bg-[url('/wallpaper.jpeg')] bg-cover bg-center"
                     }, void 0, false, {
                         fileName: "[project]/components/iphone/lock-screen.tsx",
                         lineNumber: 77,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-1",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex gap-0.5",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-0.5 h-2 bg-white rounded-full"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/iphone/lock-screen.tsx",
-                                        lineNumber: 80,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-0.5 h-3 bg-white rounded-full"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/iphone/lock-screen.tsx",
-                                        lineNumber: 81,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-0.5 h-3.5 bg-white rounded-full"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/iphone/lock-screen.tsx",
-                                        lineNumber: 82,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-0.5 h-4 bg-white rounded-full"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/iphone/lock-screen.tsx",
-                                        lineNumber: 83,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/iphone/lock-screen.tsx",
-                                lineNumber: 79,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "ml-1",
-                                children: "100%"
-                            }, void 0, false, {
-                                fileName: "[project]/components/iphone/lock-screen.tsx",
-                                lineNumber: 85,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        className: "absolute inset-0 bg-black/30 dark:bg-black/45 backdrop-blur-sm"
+                    }, void 0, false, {
                         fileName: "[project]/components/iphone/lock-screen.tsx",
                         lineNumber: 78,
                         columnNumber: 9
@@ -145,81 +98,160 @@ function LockScreen({ onUnlock, isDarkMode }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex-1 flex flex-col items-center justify-center",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-white text-center",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-7xl font-light tracking-tight mb-2 animate-fade-in",
-                            children: formatTime(time)
-                        }, void 0, false, {
-                            fileName: "[project]/components/iphone/lock-screen.tsx",
-                            lineNumber: 92,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-lg font-medium animate-fade-in",
-                            style: {
-                                animationDelay: "0.2s"
-                            },
-                            children: formatDate(time)
-                        }, void 0, false, {
-                            fileName: "[project]/components/iphone/lock-screen.tsx",
-                            lineNumber: 93,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/iphone/lock-screen.tsx",
-                    lineNumber: 91,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/components/iphone/lock-screen.tsx",
-                lineNumber: 90,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex flex-col items-center gap-2 animate-bounce",
+                className: "relative z-10 w-full h-full flex flex-col items-center justify-between",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-12 h-1 bg-white/70 rounded-full transition-all",
-                        style: {
-                            width: `${48 + swipeProgress / 2}px`,
-                            backgroundColor: `rgba(255, 255, 255, ${0.7 + swipeProgress / 200})`
-                        }
-                    }, void 0, false, {
-                        fileName: "[project]/components/iphone/lock-screen.tsx",
-                        lineNumber: 101,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-2 text-white text-sm font-medium",
+                        className: "w-full flex justify-between items-center text-white text-xs font-medium px-2",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronUp$3e$__["ChevronUp"], {
-                                className: "w-5 h-5"
-                            }, void 0, false, {
-                                fileName: "[project]/components/iphone/lock-screen.tsx",
-                                lineNumber: 109,
-                                columnNumber: 11
-                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                children: "Swipe up to unlock"
+                                children: "9:41"
                             }, void 0, false, {
                                 fileName: "[project]/components/iphone/lock-screen.tsx",
-                                lineNumber: 110,
-                                columnNumber: 11
+                                lineNumber: 84,
+                                columnNumber: 9
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-1",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex gap-0.5",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-0.5 h-2 bg-white rounded-full"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/iphone/lock-screen.tsx",
+                                                lineNumber: 87,
+                                                columnNumber: 13
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-0.5 h-3 bg-white rounded-full"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/iphone/lock-screen.tsx",
+                                                lineNumber: 88,
+                                                columnNumber: 13
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-0.5 h-3.5 bg-white rounded-full"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/iphone/lock-screen.tsx",
+                                                lineNumber: 89,
+                                                columnNumber: 13
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-0.5 h-4 bg-white rounded-full"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/iphone/lock-screen.tsx",
+                                                lineNumber: 90,
+                                                columnNumber: 13
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/iphone/lock-screen.tsx",
+                                        lineNumber: 86,
+                                        columnNumber: 11
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "ml-1",
+                                        children: "100%"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/iphone/lock-screen.tsx",
+                                        lineNumber: 92,
+                                        columnNumber: 11
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/iphone/lock-screen.tsx",
+                                lineNumber: 85,
+                                columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/iphone/lock-screen.tsx",
-                        lineNumber: 108,
-                        columnNumber: 9
+                        lineNumber: 83,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex-1 flex flex-col items-center justify-center",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "text-white text-center",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                    className: "text-7xl font-light tracking-tight mb-2 animate-fade-in",
+                                    children: formatTime(time)
+                                }, void 0, false, {
+                                    fileName: "[project]/components/iphone/lock-screen.tsx",
+                                    lineNumber: 99,
+                                    columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-lg font-medium animate-fade-in",
+                                    style: {
+                                        animationDelay: "0.2s"
+                                    },
+                                    children: formatDate(time)
+                                }, void 0, false, {
+                                    fileName: "[project]/components/iphone/lock-screen.tsx",
+                                    lineNumber: 100,
+                                    columnNumber: 11
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/iphone/lock-screen.tsx",
+                            lineNumber: 98,
+                            columnNumber: 9
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/iphone/lock-screen.tsx",
+                        lineNumber: 97,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-col items-center gap-2 animate-bounce",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "w-12 h-1 bg-white/70 rounded-full transition-all",
+                                style: {
+                                    width: `${48 + swipeProgress / 2}px`,
+                                    backgroundColor: `rgba(255, 255, 255, ${0.7 + swipeProgress / 200})`
+                                }
+                            }, void 0, false, {
+                                fileName: "[project]/components/iphone/lock-screen.tsx",
+                                lineNumber: 108,
+                                columnNumber: 9
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-2 text-white text-sm font-medium",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronUp$3e$__["ChevronUp"], {
+                                        className: "w-5 h-5"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/iphone/lock-screen.tsx",
+                                        lineNumber: 116,
+                                        columnNumber: 11
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: "Swipe up to unlock"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/iphone/lock-screen.tsx",
+                                        lineNumber: 117,
+                                        columnNumber: 11
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/iphone/lock-screen.tsx",
+                                lineNumber: 115,
+                                columnNumber: 9
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/iphone/lock-screen.tsx",
+                        lineNumber: 107,
+                        columnNumber: 7
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/iphone/lock-screen.tsx",
-                lineNumber: 100,
+                lineNumber: 81,
                 columnNumber: 7
             }, this)
         ]
@@ -617,181 +649,214 @@ function HomeScreen({ isDarkMode, onAppClick }) {
         return "Good Evening";
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative w-full h-full bg-gradient-to-b from-blue-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-950 dark:to-slate-950 transition-colors duration-500 animate-fade-in",
+        className: "relative w-full h-full overflow-hidden transition-colors duration-500 animate-fade-in",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$status$2d$bar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                isDarkMode: isDarkMode
-            }, void 0, false, {
-                fileName: "[project]/components/iphone/home-screen.tsx",
-                lineNumber: 139,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "px-6 pt-16 pb-2",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "glass-effect rounded-2xl p-4 mb-4 border border-white/20 dark:border-white/10 hover-lift",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-2xl font-bold mb-1",
-                            children: getGreeting()
-                        }, void 0, false, {
-                            fileName: "[project]/components/iphone/home-screen.tsx",
-                            lineNumber: 143,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-sm text-muted-foreground",
-                            children: "Welcome to my interactive portfolio"
-                        }, void 0, false, {
-                            fileName: "[project]/components/iphone/home-screen.tsx",
-                            lineNumber: 144,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/iphone/home-screen.tsx",
-                    lineNumber: 142,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/components/iphone/home-screen.tsx",
-                lineNumber: 141,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "px-6 pb-24",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "grid grid-cols-4 gap-6",
-                    children: apps.map((app, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "animate-fade-in",
-                            style: {
-                                animationDelay: `${index * 0.05}s`
-                            },
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                name: app.name,
-                                icon: app.icon,
-                                color: app.color,
-                                iconClassName: app.iconClassName,
-                                onClick: ()=>onAppClick?.(app.id),
-                                badge: app.badge
-                            }, void 0, false, {
-                                fileName: "[project]/components/iphone/home-screen.tsx",
-                                lineNumber: 159,
-                                columnNumber: 15
-                            }, this)
-                        }, app.id, false, {
-                            fileName: "[project]/components/iphone/home-screen.tsx",
-                            lineNumber: 152,
-                            columnNumber: 13
-                        }, this))
-                }, void 0, false, {
-                    fileName: "[project]/components/iphone/home-screen.tsx",
-                    lineNumber: 150,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/components/iphone/home-screen.tsx",
-                lineNumber: 149,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-6 left-6 right-6",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "glass-effect rounded-3xl p-4 shadow-lg border border-white/20 dark:border-white/10 animate-slide-up",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid grid-cols-4 gap-4",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                name: "Phone",
-                                icon: "/phone-icon.png",
-                                iconClassName: "w-14 h-14",
-                                color: "bg-gradient-to-br from-green-400 to-green-600",
-                                showLabel: false,
-                                onClick: ()=>onAppClick?.("phone")
-                            }, void 0, false, {
-                                fileName: "[project]/components/iphone/home-screen.tsx",
-                                lineNumber: 177,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                name: "Safari",
-                                icon: "/podcasts-icon.svg",
-                                iconClassName: "w-14 h-14",
-                                color: "bg-gradient-to-br from-blue-400 to-cyan-500",
-                                showLabel: false,
-                                onClick: ()=>onAppClick?.("safari")
-                            }, void 0, false, {
-                                fileName: "[project]/components/iphone/home-screen.tsx",
-                                lineNumber: 185,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                name: "Messages",
-                                icon: "/message-icon.png",
-                                iconClassName: "w-14 h-14",
-                                color: "bg-gradient-to-br from-green-400 to-green-600",
-                                showLabel: false,
-                                onClick: ()=>onAppClick?.("messages"),
-                                badge: 3
-                            }, void 0, false, {
-                                fileName: "[project]/components/iphone/home-screen.tsx",
-                                lineNumber: 193,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                name: "Music",
-                                icon: "/icon-dark-32x32.png",
-                                color: "bg-gradient-to-br from-pink-500 to-red-500",
-                                showLabel: false,
-                                onClick: ()=>onAppClick?.("music")
-                            }, void 0, false, {
-                                fileName: "[project]/components/iphone/home-screen.tsx",
-                                lineNumber: 202,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/iphone/home-screen.tsx",
-                        lineNumber: 175,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/components/iphone/home-screen.tsx",
-                    lineNumber: 174,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/components/iphone/home-screen.tsx",
-                lineNumber: 173,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2",
+                className: "absolute inset-0 z-0 pointer-events-none",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-2 h-2 rounded-full bg-foreground"
+                        className: "absolute inset-0 bg-[url('/wallpaper.jpeg')] bg-cover bg-center"
                     }, void 0, false, {
                         fileName: "[project]/components/iphone/home-screen.tsx",
-                        lineNumber: 215,
+                        lineNumber: 128,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-2 h-2 rounded-full bg-foreground/30"
+                        className: "absolute inset-0 bg-white/20 dark:bg-black/40 backdrop-blur-sm"
                     }, void 0, false, {
                         fileName: "[project]/components/iphone/home-screen.tsx",
-                        lineNumber: 216,
+                        lineNumber: 129,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/iphone/home-screen.tsx",
-                lineNumber: 214,
+                lineNumber: 127,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative z-10 h-full",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$status$2d$bar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        isDarkMode: isDarkMode
+                    }, void 0, false, {
+                        fileName: "[project]/components/iphone/home-screen.tsx",
+                        lineNumber: 133,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "px-6 pt-16 pb-2",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "glass-effect rounded-2xl p-4 mb-4 border border-white/20 dark:border-white/10 hover-lift",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                    className: "text-2xl font-bold mb-1",
+                                    children: getGreeting()
+                                }, void 0, false, {
+                                    fileName: "[project]/components/iphone/home-screen.tsx",
+                                    lineNumber: 137,
+                                    columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-sm text-muted-foreground",
+                                    children: "Welcome to my interactive portfolio"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/iphone/home-screen.tsx",
+                                    lineNumber: 138,
+                                    columnNumber: 11
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/iphone/home-screen.tsx",
+                            lineNumber: 136,
+                            columnNumber: 9
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/iphone/home-screen.tsx",
+                        lineNumber: 135,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "px-6 pb-24",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "grid grid-cols-4 gap-6",
+                            children: apps.map((app, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "animate-fade-in",
+                                    style: {
+                                        animationDelay: `${index * 0.05}s`
+                                    },
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        name: app.name,
+                                        icon: app.icon,
+                                        color: app.color,
+                                        iconClassName: app.iconClassName,
+                                        onClick: ()=>onAppClick?.(app.id),
+                                        badge: app.badge
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/iphone/home-screen.tsx",
+                                        lineNumber: 153,
+                                        columnNumber: 15
+                                    }, this)
+                                }, app.id, false, {
+                                    fileName: "[project]/components/iphone/home-screen.tsx",
+                                    lineNumber: 146,
+                                    columnNumber: 13
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/components/iphone/home-screen.tsx",
+                            lineNumber: 144,
+                            columnNumber: 9
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/iphone/home-screen.tsx",
+                        lineNumber: 143,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute bottom-6 left-6 right-6",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "glass-effect rounded-3xl p-4 shadow-lg border border-white/20 dark:border-white/10 animate-slide-up",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "grid grid-cols-4 gap-4",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        name: "Phone",
+                                        icon: "/phone-icon.png",
+                                        iconClassName: "w-14 h-14",
+                                        color: "bg-gradient-to-br from-green-400 to-green-600",
+                                        showLabel: false,
+                                        onClick: ()=>onAppClick?.("phone")
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/iphone/home-screen.tsx",
+                                        lineNumber: 171,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        name: "Safari",
+                                        icon: "/podcasts-icon.svg",
+                                        iconClassName: "w-14 h-14",
+                                        color: "bg-gradient-to-br from-blue-400 to-cyan-500",
+                                        showLabel: false,
+                                        onClick: ()=>onAppClick?.("safari")
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/iphone/home-screen.tsx",
+                                        lineNumber: 179,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        name: "Messages",
+                                        icon: "/message-icon.png",
+                                        iconClassName: "w-14 h-14",
+                                        color: "bg-gradient-to-br from-green-400 to-green-600",
+                                        showLabel: false,
+                                        onClick: ()=>onAppClick?.("messages"),
+                                        badge: 3
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/iphone/home-screen.tsx",
+                                        lineNumber: 187,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$iphone$2f$app$2d$icon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        name: "Music",
+                                        icon: "/reminders-icon.svg",
+                                        iconClassName: "w-14 h-14",
+                                        color: "bg-gradient-to-br from-pink-500 to-red-500",
+                                        showLabel: false,
+                                        onClick: ()=>onAppClick?.("music")
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/iphone/home-screen.tsx",
+                                        lineNumber: 196,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/iphone/home-screen.tsx",
+                                lineNumber: 169,
+                                columnNumber: 11
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/components/iphone/home-screen.tsx",
+                            lineNumber: 168,
+                            columnNumber: 9
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/iphone/home-screen.tsx",
+                        lineNumber: 167,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "w-2 h-2 rounded-full bg-foreground"
+                            }, void 0, false, {
+                                fileName: "[project]/components/iphone/home-screen.tsx",
+                                lineNumber: 210,
+                                columnNumber: 9
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "w-2 h-2 rounded-full bg-foreground/30"
+                            }, void 0, false, {
+                                fileName: "[project]/components/iphone/home-screen.tsx",
+                                lineNumber: 211,
+                                columnNumber: 9
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/iphone/home-screen.tsx",
+                        lineNumber: 209,
+                        columnNumber: 7
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/iphone/home-screen.tsx",
+                lineNumber: 132,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/iphone/home-screen.tsx",
-        lineNumber: 138,
+        lineNumber: 125,
         columnNumber: 5
     }, this);
 }
@@ -2130,7 +2195,7 @@ const initialMessages = [
     },
     {
         id: 7,
-        text: "You can reach me via email at john@example.com or check my LinkedIn and GitHub in the Phone app!",
+        text: "You can reach me via email at dulmin.code@gmail.com or check my LinkedIn and GitHub in the Phone app!",
         sender: "me",
         timestamp: "10:36 AM"
     }
@@ -2155,20 +2220,20 @@ function MessagesApp({ onClose, isDarkMode }) {
                                 className: "w-5 h-5"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/messages-app.tsx",
-                                lineNumber: 55,
+                                lineNumber: 67,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "Messages"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/messages-app.tsx",
-                                lineNumber: 56,
+                                lineNumber: 68,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/messages-app.tsx",
-                        lineNumber: 54,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2181,12 +2246,12 @@ function MessagesApp({ onClose, isDarkMode }) {
                                     children: "RC"
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/messages-app.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 72,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/messages-app.tsx",
-                                lineNumber: 59,
+                                lineNumber: 71,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2194,26 +2259,26 @@ function MessagesApp({ onClose, isDarkMode }) {
                                 children: "Recruiter"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/messages-app.tsx",
-                                lineNumber: 62,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/messages-app.tsx",
-                        lineNumber: 58,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-16"
                     }, void 0, false, {
                         fileName: "[project]/components/apps/messages-app.tsx",
-                        lineNumber: 64,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/apps/messages-app.tsx",
-                lineNumber: 53,
+                lineNumber: 65,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2230,12 +2295,12 @@ function MessagesApp({ onClose, isDarkMode }) {
                                         children: message.text
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/messages-app.tsx",
-                                        lineNumber: 82,
+                                        lineNumber: 94,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/messages-app.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 87,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2243,23 +2308,23 @@ function MessagesApp({ onClose, isDarkMode }) {
                                     children: message.timestamp
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/messages-app.tsx",
-                                    lineNumber: 84,
+                                    lineNumber: 96,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/apps/messages-app.tsx",
-                            lineNumber: 74,
+                            lineNumber: 86,
                             columnNumber: 13
                         }, this)
                     }, message.id, false, {
                         fileName: "[project]/components/apps/messages-app.tsx",
-                        lineNumber: 70,
+                        lineNumber: 82,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/apps/messages-app.tsx",
-                lineNumber: 68,
+                lineNumber: 80,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2275,7 +2340,7 @@ function MessagesApp({ onClose, isDarkMode }) {
                                 className: "flex-1 rounded-full"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/messages-app.tsx",
-                                lineNumber: 93,
+                                lineNumber: 105,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -2286,18 +2351,18 @@ function MessagesApp({ onClose, isDarkMode }) {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/messages-app.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 112,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/messages-app.tsx",
-                                lineNumber: 99,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/messages-app.tsx",
-                        lineNumber: 92,
+                        lineNumber: 104,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2305,19 +2370,19 @@ function MessagesApp({ onClose, isDarkMode }) {
                         children: "This is a simulated conversation showcasing my background"
                     }, void 0, false, {
                         fileName: "[project]/components/apps/messages-app.tsx",
-                        lineNumber: 103,
+                        lineNumber: 115,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/apps/messages-app.tsx",
-                lineNumber: 91,
+                lineNumber: 103,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/apps/messages-app.tsx",
-        lineNumber: 51,
+        lineNumber: 63,
         columnNumber: 5
     }, this);
 }
@@ -2436,23 +2501,23 @@ var _s = __turbopack_context__.k.signature();
 const bookmarks = [
     {
         name: "GitHub",
-        url: "github.com/johndeveloper",
-        icon: "🐙"
+        url: "https://github.com/Dulmin2021",
+        icon: "/github.svg"
     },
     {
         name: "LinkedIn",
-        url: "linkedin.com/in/johndeveloper",
-        icon: "💼"
+        url: "https://www.linkedin.com/in/dulmin-wickramage-464b23197/",
+        icon: "/linkedin.svg"
     },
     {
         name: "Blog",
-        url: "blog.johndeveloper.com",
-        icon: "📝"
+        url: "https://medium.com/@dulmin.edu",
+        icon: "/professional-portrait.jpg"
     },
     {
         name: "Resume",
-        url: "resume.johndeveloper.com",
-        icon: "📄"
+        url: "https://dulmin.com",
+        icon: "/task-management-dashboard.png"
     }
 ];
 const projectLinks = [
@@ -2477,7 +2542,7 @@ const projectLinks = [
 ];
 function SafariApp({ onClose, isDarkMode }) {
     _s();
-    const [currentUrl, setCurrentUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("portfolio.johndeveloper.com");
+    const [currentUrl, setCurrentUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("portfolio.dulmin.com");
     const [view, setView] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("bookmarks");
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full h-full bg-background flex flex-col animate-zoom-in",
@@ -2679,12 +2744,23 @@ function SafariApp({ onClose, isDarkMode }) {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "grid grid-cols-4 gap-4",
-                                    children: bookmarks.map((bookmark)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    children: bookmarks.map((bookmark)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                            href: bookmark.url,
+                                            target: "_blank",
+                                            rel: "noopener noreferrer",
                                             className: "flex flex-col items-center gap-2 group",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-2xl group-hover:scale-110 transition-transform",
-                                                    children: bookmark.icon
+                                                    className: "w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-2xl group-hover:scale-110 transition-transform overflow-hidden",
+                                                    children: bookmark.icon.endsWith('.svg') || bookmark.icon.endsWith('.jpg') || bookmark.icon.endsWith('.png') ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                        src: bookmark.icon,
+                                                        alt: bookmark.name,
+                                                        className: "w-full h-full object-cover"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/apps/safari-app.tsx",
+                                                        lineNumber: 106,
+                                                        columnNumber: 25
+                                                    }, this) : bookmark.icon
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/apps/safari-app.tsx",
                                                     lineNumber: 104,
@@ -2695,7 +2771,7 @@ function SafariApp({ onClose, isDarkMode }) {
                                                     children: bookmark.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/apps/safari-app.tsx",
-                                                    lineNumber: 107,
+                                                    lineNumber: 111,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
@@ -2723,11 +2799,11 @@ function SafariApp({ onClose, isDarkMode }) {
                                     children: "Quick Links"
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/safari-app.tsx",
-                                    lineNumber: 114,
+                                    lineNumber: 118,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "https://github.com",
+                                    href: "https://github.com/Dulmin2021",
                                     target: "_blank",
                                     rel: "noopener noreferrer",
                                     className: "block p-4 bg-card rounded-lg border border-border hover:bg-accent transition-colors",
@@ -2735,11 +2811,10 @@ function SafariApp({ onClose, isDarkMode }) {
                                         className: "flex items-center gap-3",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-2xl",
-                                                children: "🐙"
+                                                className: "text-2xl"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/apps/safari-app.tsx",
-                                                lineNumber: 122,
+                                                lineNumber: 126,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2749,7 +2824,7 @@ function SafariApp({ onClose, isDarkMode }) {
                                                         children: "GitHub Profile"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/safari-app.tsx",
-                                                        lineNumber: 124,
+                                                        lineNumber: 128,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2757,129 +2832,109 @@ function SafariApp({ onClose, isDarkMode }) {
                                                         children: "View my open source contributions"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/safari-app.tsx",
-                                                        lineNumber: 125,
+                                                        lineNumber: 129,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/apps/safari-app.tsx",
-                                                lineNumber: 123,
+                                                lineNumber: 127,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/apps/safari-app.tsx",
-                                        lineNumber: 121,
+                                        lineNumber: 125,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/safari-app.tsx",
-                                    lineNumber: 115,
+                                    lineNumber: 119,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    href: "https://linkedin.com",
+                                    href: "https://www.linkedin.com/in/dulmin-wickramage-464b23197/",
                                     target: "_blank",
                                     rel: "noopener noreferrer",
                                     className: "block p-4 bg-card rounded-lg border border-border hover:bg-accent transition-colors",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex items-center gap-3",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-2xl",
-                                                children: "💼"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/apps/safari-app.tsx",
-                                                lineNumber: 137,
-                                                columnNumber: 19
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                        className: "font-semibold",
-                                                        children: "LinkedIn"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/apps/safari-app.tsx",
-                                                        lineNumber: 139,
-                                                        columnNumber: 21
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-xs text-muted-foreground",
-                                                        children: "Connect with me professionally"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/apps/safari-app.tsx",
-                                                        lineNumber: 140,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/components/apps/safari-app.tsx",
-                                                lineNumber: 138,
-                                                columnNumber: 19
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    className: "font-semibold",
+                                                    children: "LinkedIn"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/apps/safari-app.tsx",
+                                                    lineNumber: 142,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-xs text-muted-foreground",
+                                                    children: "Connect with me professionally"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/apps/safari-app.tsx",
+                                                    lineNumber: 143,
+                                                    columnNumber: 21
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/apps/safari-app.tsx",
+                                            lineNumber: 141,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
                                         fileName: "[project]/components/apps/safari-app.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 140,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/safari-app.tsx",
-                                    lineNumber: 130,
+                                    lineNumber: 134,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "p-4 bg-card rounded-lg border border-border",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex items-center gap-3",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-2xl",
-                                                children: "📄"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/apps/safari-app.tsx",
-                                                lineNumber: 147,
-                                                columnNumber: 19
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                        className: "font-semibold",
-                                                        children: "Resume / CV"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/apps/safari-app.tsx",
-                                                        lineNumber: 149,
-                                                        columnNumber: 21
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-xs text-muted-foreground",
-                                                        children: "Download my latest resume"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/apps/safari-app.tsx",
-                                                        lineNumber: 150,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/components/apps/safari-app.tsx",
-                                                lineNumber: 148,
-                                                columnNumber: 19
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    className: "font-semibold",
+                                                    children: "Resume / CV"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/apps/safari-app.tsx",
+                                                    lineNumber: 151,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-xs text-muted-foreground",
+                                                    children: "Download my latest resume"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/apps/safari-app.tsx",
+                                                    lineNumber: 152,
+                                                    columnNumber: 21
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/apps/safari-app.tsx",
+                                            lineNumber: 150,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
                                         fileName: "[project]/components/apps/safari-app.tsx",
-                                        lineNumber: 146,
+                                        lineNumber: 149,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/safari-app.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 148,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/apps/safari-app.tsx",
-                            lineNumber: 113,
+                            lineNumber: 117,
                             columnNumber: 13
                         }, this)
                     ]
@@ -2895,7 +2950,7 @@ function SafariApp({ onClose, isDarkMode }) {
                             children: "Featured Projects"
                         }, void 0, false, {
                             fileName: "[project]/components/apps/safari-app.tsx",
-                            lineNumber: 158,
+                            lineNumber: 160,
                             columnNumber: 13
                         }, this),
                         projectLinks.map((project)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2906,7 +2961,7 @@ function SafariApp({ onClose, isDarkMode }) {
                                         children: project.title
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/safari-app.tsx",
-                                        lineNumber: 164,
+                                        lineNumber: 166,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2914,7 +2969,7 @@ function SafariApp({ onClose, isDarkMode }) {
                                         children: project.description
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/safari-app.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 167,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2925,34 +2980,36 @@ function SafariApp({ onClose, isDarkMode }) {
                                                 children: project.tech
                                             }, void 0, false, {
                                                 fileName: "[project]/components/apps/safari-app.tsx",
-                                                lineNumber: 167,
+                                                lineNumber: 169,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                 href: `https://${project.url}`,
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
                                                 className: "text-xs text-primary font-medium",
                                                 children: "View Code →"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/apps/safari-app.tsx",
-                                                lineNumber: 168,
+                                                lineNumber: 170,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/apps/safari-app.tsx",
-                                        lineNumber: 166,
+                                        lineNumber: 168,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, project.title, true, {
                                 fileName: "[project]/components/apps/safari-app.tsx",
-                                lineNumber: 160,
+                                lineNumber: 162,
                                 columnNumber: 15
                             }, this))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/apps/safari-app.tsx",
-                    lineNumber: 157,
+                    lineNumber: 159,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
@@ -2967,7 +3024,7 @@ function SafariApp({ onClose, isDarkMode }) {
         columnNumber: 5
     }, this);
 }
-_s(SafariApp, "qXTdis39lFQ8wzv247kZYwYq2Xo=");
+_s(SafariApp, "R2k6mMRvNhPJTnJ8Fh/3/xPck9g=");
 _c = SafariApp;
 var _c;
 __turbopack_context__.k.register(_c, "SafariApp");
@@ -3735,14 +3792,14 @@ const notesList = [
     {
         id: 1,
         title: "Professional Skills",
-        preview: "Frontend: React, Next.js, TypeScript, Tailwind CSS\nBackend: Node.js, Express, PostgreSQL...",
+        preview: "Frontend: React, Next.js, TypeScript, Tailwind CSS\nBackend: Node.js, ...",
         date: "12/14/2024",
         category: "Career"
     },
     {
         id: 2,
         title: "Education & Certifications",
-        preview: "B.S. Computer Science - University Name (2019)\nAWS Certified Developer\nGoogle Cloud Professional...",
+        preview: "B.Sc. Computer Science - NSBM Green University, Elements of AI - University of Helsinki...",
         date: "12/10/2024",
         category: "Career"
     },
@@ -3756,14 +3813,14 @@ const notesList = [
     {
         id: 4,
         title: "Current Projects",
-        preview: "Working on: AI-powered task manager\nLearning: Rust and WebAssembly\nExploring: Blockchain tech...",
+        preview: "Working on: Mind blowing 3d fun site using threeJS\nLearning: Python and WebAssembly\nExploring: Blockchain tech...",
         date: "12/01/2024",
         category: "Work"
     },
     {
         id: 5,
         title: "Career Goals",
-        preview: "Build impactful products that solve real problems\nContribute to open source\nMentor junior developers...",
+        preview: "Build impactful products that solve real problems\nContribute to open source\nMentor...",
         date: "11/28/2024",
         category: "Career"
     }
@@ -3772,11 +3829,10 @@ const noteContent = {
     1: `Professional Skills
   
 Frontend Development:
-• React.js & Next.js (5+ years)
-• TypeScript & JavaScript (ES6+)
-• Tailwind CSS, SCSS, Styled Components
+• React.js & Next.js
+• TypeScript & JavaScript
+• Tailwind CSS, Styled Components
 • Responsive & Mobile-First Design
-• Performance Optimization
 
 Backend Development:
 • Node.js & Express
@@ -3789,71 +3845,64 @@ Tools & Technologies:
 • Git & GitHub
 • Docker & CI/CD
 • Testing (Jest, Cypress)
-• Figma & Design Systems
+• UI UX (Figma, Adobe XD)
 • Agile/Scrum Methodologies`,
     2: `Education & Certifications
 
-B.S. Computer Science
-University Name, 2015-2019
-GPA: 3.8/4.0
+B.Sc. Computer Science
+NSBM Green University, 2022-2026
+
 
 Certifications:
-✓ AWS Certified Developer - Associate
-✓ Google Cloud Professional Architect
-✓ Meta Front-End Developer
-✓ MongoDB Certified Developer
+✓ Google IT Support 
+✓ Google UI UX
+✓ Cyber Security Foundation Professional Certificate - CSFPC™
 
 Courses & Learning:
-• Advanced React Patterns
-• System Design & Architecture
-• Machine Learning Fundamentals
-• Web Performance Optimization`,
-    3: `This is Me
+• DevOps Specialization on Coursera
+• AWS on Amazon Skill builder
+• Crash course on Python
+`,
+    3: `This is Me!
 
-☕ Coffee Enthusiast
-I start every morning with a pour-over coffee. Favorite roast: Ethiopian Yirgacheffe
+• ♟️checkmate with respect🙇‍♂️.
 
-📸 Photography Hobbyist
-Love capturing landscapes and urban architecture. Check out my Instagram!
+• 📖Reading 20 pages of a novel instead of taking a siesta😴➡️📚.
 
-🥾 Outdoor Adventurer
-Hiking, camping, and exploring nature trails on weekends
+• 🌍🗣️Speaking multiple languages :
+“Hello”, “¡Hola!”, “Hallo”, “Bonjour”, “Ciao”
 
-🎮 Gaming
-Enjoy strategy games and indie titles. Currently playing: Hollow Knight
+• 👨‍🍳✨Cooking new recipes with the confidence of a Michelin-star chef⭐.
 
-🌍 Languages
-Sinhala (native), English, learning Spanish & German
+• 🧪🍸 Mixing up a great cocktail (or a safe mocktail).
 
-💻 First Code
-Built my first website at age 14 - a fan site for my favorite band`,
+• 🧠☕ Believing most problems can be solved after coffee
+`,
     4: `Current Projects
 
 🚀 Active Development:
-1. AI Task Manager
-   - Using OpenAI API for smart task suggestions
+1. Tubefetch Youtube Downloader
    - Built with Next.js 15 and Supabase
    - Status: Beta testing
 
-2. Developer Portfolio Template
+2.  Interactive web experiments with data visualizations
    - Open source Next.js template
-   - Dark mode, animations, SEO optimized
-   - Status: Ready to launch
+   - Dark mode, animations, 3D environments, SEO optimized
+   - Status: still working
 
 📚 Learning & Exploring:
-• Rust programming language
-• WebAssembly for performance
-• Blockchain & Web3 technologies
-• Advanced TypeScript patterns
+• Python
+• DevOps and AIOps
+• Intergrating Advanced Automation
 
 🎯 Upcoming Ideas:
-- SaaS boilerplate
+- AI security product
 - Component library
 - Tech blog/newsletter`,
     5: `Career Goals
 
 Short-term (1 year):
-✓ Master Next.js 15 and React 19
+✓ Master DevOps Skills
 ✓ Contribute to 3+ open source projects
 ✓ Build and launch 2 SaaS products
 ✓ Grow professional network
@@ -3862,17 +3911,13 @@ Mid-term (2-3 years):
 • Lead a development team
 • Speak at tech conferences
 • Publish technical articles
-• Mentor junior developers
 
 Long-term (5+ years):
-• Start own tech company
-• Create educational content
-• Build products that impact millions
-• Give back to the community
+ ******************
+You don't need to know them.
+ ******************
 
 Core Values:
-• Write clean, maintainable code
-• Prioritize user experience
 • Embrace continuous learning
 • Collaborate and share knowledge`
 };
@@ -3898,20 +3943,20 @@ function NotesApp({ onClose, isDarkMode }) {
                                     className: "w-5 h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/notes-app.tsx",
-                                    lineNumber: 177,
+                                    lineNumber: 165,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: "Notes"
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/notes-app.tsx",
-                                    lineNumber: 178,
+                                    lineNumber: 166,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/apps/notes-app.tsx",
-                            lineNumber: 176,
+                            lineNumber: 164,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -3920,13 +3965,13 @@ function NotesApp({ onClose, isDarkMode }) {
                             children: "Done"
                         }, void 0, false, {
                             fileName: "[project]/components/apps/notes-app.tsx",
-                            lineNumber: 180,
+                            lineNumber: 168,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/apps/notes-app.tsx",
-                    lineNumber: 175,
+                    lineNumber: 163,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3937,7 +3982,7 @@ function NotesApp({ onClose, isDarkMode }) {
                             children: note?.title
                         }, void 0, false, {
                             fileName: "[project]/components/apps/notes-app.tsx",
-                            lineNumber: 187,
+                            lineNumber: 175,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3945,7 +3990,7 @@ function NotesApp({ onClose, isDarkMode }) {
                             children: note?.date
                         }, void 0, false, {
                             fileName: "[project]/components/apps/notes-app.tsx",
-                            lineNumber: 188,
+                            lineNumber: 176,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("pre", {
@@ -3953,19 +3998,19 @@ function NotesApp({ onClose, isDarkMode }) {
                             children: content
                         }, void 0, false, {
                             fileName: "[project]/components/apps/notes-app.tsx",
-                            lineNumber: 189,
+                            lineNumber: 177,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/apps/notes-app.tsx",
-                    lineNumber: 186,
+                    lineNumber: 174,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/apps/notes-app.tsx",
-            lineNumber: 173,
+            lineNumber: 161,
             columnNumber: 7
         }, this);
     }
@@ -3985,20 +4030,20 @@ function NotesApp({ onClose, isDarkMode }) {
                                 className: "w-5 h-5"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/notes-app.tsx",
-                                lineNumber: 200,
+                                lineNumber: 188,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/notes-app.tsx",
-                                lineNumber: 201,
+                                lineNumber: 189,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/notes-app.tsx",
-                        lineNumber: 199,
+                        lineNumber: 187,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -4006,7 +4051,7 @@ function NotesApp({ onClose, isDarkMode }) {
                         children: "Notes"
                     }, void 0, false, {
                         fileName: "[project]/components/apps/notes-app.tsx",
-                        lineNumber: 203,
+                        lineNumber: 191,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -4016,18 +4061,18 @@ function NotesApp({ onClose, isDarkMode }) {
                             className: "w-5 h-5"
                         }, void 0, false, {
                             fileName: "[project]/components/apps/notes-app.tsx",
-                            lineNumber: 205,
+                            lineNumber: 193,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/apps/notes-app.tsx",
-                        lineNumber: 204,
+                        lineNumber: 192,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/apps/notes-app.tsx",
-                lineNumber: 198,
+                lineNumber: 186,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4039,7 +4084,7 @@ function NotesApp({ onClose, isDarkMode }) {
                             className: "w-4 h-4 text-muted-foreground"
                         }, void 0, false, {
                             fileName: "[project]/components/apps/notes-app.tsx",
-                            lineNumber: 212,
+                            lineNumber: 200,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -4048,18 +4093,18 @@ function NotesApp({ onClose, isDarkMode }) {
                             className: "flex-1 bg-transparent outline-none text-sm placeholder:text-muted-foreground"
                         }, void 0, false, {
                             fileName: "[project]/components/apps/notes-app.tsx",
-                            lineNumber: 213,
+                            lineNumber: 201,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/apps/notes-app.tsx",
-                    lineNumber: 211,
+                    lineNumber: 199,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/apps/notes-app.tsx",
-                lineNumber: 210,
+                lineNumber: 198,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4074,14 +4119,14 @@ function NotesApp({ onClose, isDarkMode }) {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/components/apps/notes-app.tsx",
-                                    lineNumber: 225,
+                                    lineNumber: 213,
                                     columnNumber: 13
                                 }, this),
                                 "All Notes"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/apps/notes-app.tsx",
-                            lineNumber: 224,
+                            lineNumber: 212,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4089,7 +4134,7 @@ function NotesApp({ onClose, isDarkMode }) {
                             children: "Career"
                         }, void 0, false, {
                             fileName: "[project]/components/apps/notes-app.tsx",
-                            lineNumber: 228,
+                            lineNumber: 216,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4097,18 +4142,18 @@ function NotesApp({ onClose, isDarkMode }) {
                             children: "Personal"
                         }, void 0, false, {
                             fileName: "[project]/components/apps/notes-app.tsx",
-                            lineNumber: 231,
+                            lineNumber: 219,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/apps/notes-app.tsx",
-                    lineNumber: 223,
+                    lineNumber: 211,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/apps/notes-app.tsx",
-                lineNumber: 222,
+                lineNumber: 210,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4125,7 +4170,7 @@ function NotesApp({ onClose, isDarkMode }) {
                                         children: note.title
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/notes-app.tsx",
-                                        lineNumber: 246,
+                                        lineNumber: 234,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4133,13 +4178,13 @@ function NotesApp({ onClose, isDarkMode }) {
                                         children: note.date
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/notes-app.tsx",
-                                        lineNumber: 247,
+                                        lineNumber: 235,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/apps/notes-app.tsx",
-                                lineNumber: 245,
+                                lineNumber: 233,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4147,24 +4192,24 @@ function NotesApp({ onClose, isDarkMode }) {
                                 children: note.preview
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/notes-app.tsx",
-                                lineNumber: 249,
+                                lineNumber: 237,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, note.id, true, {
                         fileName: "[project]/components/apps/notes-app.tsx",
-                        lineNumber: 240,
+                        lineNumber: 228,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/apps/notes-app.tsx",
-                lineNumber: 238,
+                lineNumber: 226,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/apps/notes-app.tsx",
-        lineNumber: 196,
+        lineNumber: 184,
         columnNumber: 5
     }, this);
 }
@@ -4863,8 +4908,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2
 ;
 function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
     const handleDownloadResume = ()=>{
-        // Simulate resume download
-        alert("Resume download started! (This is a demo)");
+        const resumePath = "/resume.pdf";
+        const link = document.createElement("a");
+        link.href = resumePath;
+        link.download = "Dulmin_Wickramage_Resume.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full h-full bg-background flex flex-col animate-zoom-in",
@@ -4882,20 +4932,20 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                 className: "w-5 h-5"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 25,
+                                lineNumber: 30,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 26,
+                                lineNumber: 31,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/settings-app.tsx",
-                        lineNumber: 24,
+                        lineNumber: 29,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -4903,20 +4953,20 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                         children: "Settings"
                     }, void 0, false, {
                         fileName: "[project]/components/apps/settings-app.tsx",
-                        lineNumber: 28,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-16"
                     }, void 0, false, {
                         fileName: "[project]/components/apps/settings-app.tsx",
-                        lineNumber: 29,
+                        lineNumber: 34,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/apps/settings-app.tsx",
-                lineNumber: 23,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4926,18 +4976,28 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                         className: "w-full p-6 border-b border-border hover:bg-accent transition-colors flex items-center gap-4",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Avatar"], {
-                                className: "w-16 h-16",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AvatarFallback"], {
-                                    className: "text-2xl font-bold bg-primary text-primary-foreground",
-                                    children: "JD"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/apps/settings-app.tsx",
-                                    lineNumber: 37,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
+                                className: "w-32 h-32 mb-4",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AvatarImage"], {
+                                        src: "/professional-portrait.jpg",
+                                        alt: "My pic"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/apps/settings-app.tsx",
+                                        lineNumber: 42,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AvatarFallback"], {
+                                        className: "text-3xl font-semibold bg-primary text-primary-foreground",
+                                        children: "DW"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/apps/settings-app.tsx",
+                                        lineNumber: 43,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 36,
+                                lineNumber: 41,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4945,37 +5005,37 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                         className: "text-xl font-bold",
-                                        children: "John Developer"
+                                        children: "Dulmin wickramage"
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                        lineNumber: 40,
+                                        lineNumber: 46,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-sm text-muted-foreground",
-                                        children: "Full-Stack Developer"
+                                        children: "DevOps enthusiast"
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                        lineNumber: 41,
+                                        lineNumber: 47,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 39,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
                                 className: "w-5 h-5 text-muted-foreground"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 43,
+                                lineNumber: 49,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/settings-app.tsx",
-                        lineNumber: 35,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4986,7 +5046,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                 children: "Appearance"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 48,
+                                lineNumber: 54,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4999,13 +5059,13 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                 className: "w-5 h-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 51,
+                                                lineNumber: 57,
                                                 columnNumber: 29
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
                                                 className: "w-5 h-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 51,
+                                                lineNumber: 57,
                                                 columnNumber: 60
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5015,7 +5075,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         children: "Dark Mode"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 53,
+                                                        lineNumber: 59,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5023,19 +5083,19 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         children: "Toggle dark/light theme"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 54,
+                                                        lineNumber: 60,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 52,
+                                                lineNumber: 58,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                        lineNumber: 50,
+                                        lineNumber: 56,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$switch$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Switch"], {
@@ -5043,19 +5103,19 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                         onCheckedChange: setIsDarkMode
                                     }, void 0, false, {
                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 63,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 49,
+                                lineNumber: 55,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/settings-app.tsx",
-                        lineNumber: 47,
+                        lineNumber: 53,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5066,7 +5126,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                 children: "Portfolio"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 63,
+                                lineNumber: 69,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5083,7 +5143,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         className: "w-5 h-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 70,
+                                                        lineNumber: 76,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5094,7 +5154,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                                 children: "Download Resume"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                                lineNumber: 72,
+                                                                lineNumber: 78,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5102,32 +5162,32 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                                 children: "Get PDF version"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                                lineNumber: 73,
+                                                                lineNumber: 79,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 71,
+                                                        lineNumber: 77,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 69,
+                                                lineNumber: 75,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
                                                 className: "w-5 h-5 text-muted-foreground"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 76,
+                                                lineNumber: 82,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                        lineNumber: 65,
+                                        lineNumber: 71,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -5140,7 +5200,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         className: "w-5 h-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 81,
+                                                        lineNumber: 87,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5151,7 +5211,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                                 children: "Notifications"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                                lineNumber: 83,
+                                                                lineNumber: 89,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5159,44 +5219,44 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                                 children: "Manage alerts"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                                lineNumber: 84,
+                                                                lineNumber: 90,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 82,
+                                                        lineNumber: 88,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 80,
+                                                lineNumber: 86,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
                                                 className: "w-5 h-5 text-muted-foreground"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 87,
+                                                lineNumber: 93,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                        lineNumber: 79,
+                                        lineNumber: 85,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 64,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/settings-app.tsx",
-                        lineNumber: 62,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5207,7 +5267,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                 children: "About"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 94,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5223,7 +5283,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         className: "w-5 h-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 98,
+                                                        lineNumber: 104,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5234,7 +5294,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                                 children: "Professional Info"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                                lineNumber: 100,
+                                                                lineNumber: 106,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5242,32 +5302,32 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                                 children: "Skills, experience, education"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                                lineNumber: 101,
+                                                                lineNumber: 107,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 99,
+                                                        lineNumber: 105,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 97,
+                                                lineNumber: 103,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
                                                 className: "w-5 h-5 text-muted-foreground"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 104,
+                                                lineNumber: 110,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                        lineNumber: 96,
+                                        lineNumber: 102,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5280,7 +5340,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         className: "w-5 h-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 109,
+                                                        lineNumber: 115,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5288,13 +5348,13 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         children: "Device Info"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 110,
+                                                        lineNumber: 116,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 108,
+                                                lineNumber: 114,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5304,33 +5364,33 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         children: "Model: iPhone 15 Pro Simulator"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 113,
+                                                        lineNumber: 119,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         children: "Version: iPortfolio 1.0.0"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 114,
+                                                        lineNumber: 120,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         children: "Built with: Next.js 16 & React 19"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 115,
+                                                        lineNumber: 121,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 112,
+                                                lineNumber: 118,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 113,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5343,7 +5403,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         className: "w-5 h-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 121,
+                                                        lineNumber: 127,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5351,13 +5411,13 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                         children: "Software Update"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 122,
+                                                        lineNumber: 128,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 120,
+                                                lineNumber: 126,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5365,10 +5425,10 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-sm text-muted-foreground",
-                                                        children: "Your portfolio is up to date"
+                                                        children: "Your iPhone is up to date"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 125,
+                                                        lineNumber: 131,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5379,65 +5439,65 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                                                 children: "Recent Updates:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                                lineNumber: 127,
+                                                                lineNumber: 133,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 children: "• Added new project showcases"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                                lineNumber: 128,
+                                                                lineNumber: 134,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 children: "• Improved dark mode"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                                lineNumber: 129,
+                                                                lineNumber: 135,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 children: "• Enhanced animations"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                                lineNumber: 130,
+                                                                lineNumber: 136,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                 children: "• Bug fixes and performance improvements"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                                lineNumber: 131,
+                                                                lineNumber: 137,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                                        lineNumber: 126,
+                                                        lineNumber: 132,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                                lineNumber: 124,
+                                                lineNumber: 130,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/apps/settings-app.tsx",
-                                        lineNumber: 119,
+                                        lineNumber: 125,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 95,
+                                lineNumber: 101,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/settings-app.tsx",
-                        lineNumber: 93,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5447,7 +5507,7 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                 children: "iPortfolio v1.0.0"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 140,
+                                lineNumber: 146,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5455,33 +5515,33 @@ function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
                                 children: "Created with Next.js & React"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 141,
+                                lineNumber: 147,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mt-4",
-                                children: "© 2025 John Developer"
+                                children: "© 2025 Dulmin wickramage"
                             }, void 0, false, {
                                 fileName: "[project]/components/apps/settings-app.tsx",
-                                lineNumber: 142,
+                                lineNumber: 148,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/apps/settings-app.tsx",
-                        lineNumber: 139,
+                        lineNumber: 145,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/apps/settings-app.tsx",
-                lineNumber: 33,
+                lineNumber: 38,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/apps/settings-app.tsx",
-        lineNumber: 21,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }

@@ -12,10 +12,10 @@ interface SafariAppProps {
 }
 
 const bookmarks = [
-  { name: "GitHub", url: "github.com/johndeveloper", icon: "🐙" },
-  { name: "LinkedIn", url: "linkedin.com/in/johndeveloper", icon: "💼" },
-  { name: "Blog", url: "blog.johndeveloper.com", icon: "📝" },
-  { name: "Resume", url: "resume.johndeveloper.com", icon: "📄" },
+  { name: "GitHub", url: "https://github.com/Dulmin2021", icon: "/github.svg" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/dulmin-wickramage-464b23197/", icon: "/linkedin.svg" },
+  { name: "Blog", url: "https://medium.com/@dulmin.edu", icon: "/professional-portrait.jpg" },
+  { name: "Resume", url: "https://dulmin.com", icon: "/task-management-dashboard.png" },
 ]
 
 const projectLinks = [
@@ -40,7 +40,7 @@ const projectLinks = [
 ]
 
 export default function SafariApp({ onClose, isDarkMode }: SafariAppProps) {
-  const [currentUrl, setCurrentUrl] = useState("portfolio.johndeveloper.com")
+  const [currentUrl, setCurrentUrl] = useState("portfolio.dulmin.com")
   const [view, setView] = useState<"bookmarks" | "projects">("bookmarks")
 
   return (
@@ -100,12 +100,16 @@ export default function SafariApp({ onClose, isDarkMode }: SafariAppProps) {
               <h2 className="text-lg font-bold mb-3">Favorites</h2>
               <div className="grid grid-cols-4 gap-4">
                 {bookmarks.map((bookmark) => (
-                  <button key={bookmark.name} className="flex flex-col items-center gap-2 group">
-                    <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                      {bookmark.icon}
+                  <a key={bookmark.name} href={bookmark.url} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
+                    <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-2xl group-hover:scale-110 transition-transform overflow-hidden">
+                      {bookmark.icon.endsWith('.svg') || bookmark.icon.endsWith('.jpg') || bookmark.icon.endsWith('.png') ? (
+                        <img src={bookmark.icon} alt={bookmark.name} className="w-full h-full object-cover" />
+                      ) : (
+                        bookmark.icon
+                      )}
                     </div>
                     <span className="text-xs text-center">{bookmark.name}</span>
-                  </button>
+                  </a>
                 ))}
               </div>
             </div>
@@ -113,13 +117,13 @@ export default function SafariApp({ onClose, isDarkMode }: SafariAppProps) {
             <div className="space-y-3">
               <h2 className="text-lg font-bold">Quick Links</h2>
               <a
-                href="https://github.com"
+                href="https://github.com/Dulmin2021"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block p-4 bg-card rounded-lg border border-border hover:bg-accent transition-colors"
               >
                 <div className="flex items-center gap-3">
-                  <div className="text-2xl">🐙</div>
+                  <div className="text-2xl"></div>
                   <div>
                     <h3 className="font-semibold">GitHub Profile</h3>
                     <p className="text-xs text-muted-foreground">View my open source contributions</p>
@@ -128,13 +132,12 @@ export default function SafariApp({ onClose, isDarkMode }: SafariAppProps) {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/dulmin-wickramage-464b23197/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block p-4 bg-card rounded-lg border border-border hover:bg-accent transition-colors"
               >
                 <div className="flex items-center gap-3">
-                  <div className="text-2xl">💼</div>
                   <div>
                     <h3 className="font-semibold">LinkedIn</h3>
                     <p className="text-xs text-muted-foreground">Connect with me professionally</p>
@@ -144,7 +147,6 @@ export default function SafariApp({ onClose, isDarkMode }: SafariAppProps) {
 
               <div className="p-4 bg-card rounded-lg border border-border">
                 <div className="flex items-center gap-3">
-                  <div className="text-2xl">📄</div>
                   <div>
                     <h3 className="font-semibold">Resume / CV</h3>
                     <p className="text-xs text-muted-foreground">Download my latest resume</p>
@@ -165,7 +167,7 @@ export default function SafariApp({ onClose, isDarkMode }: SafariAppProps) {
                 <p className="text-sm text-muted-foreground mb-2">{project.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-muted-foreground">{project.tech}</span>
-                  <a href={`https://${project.url}`} className="text-xs text-primary font-medium">
+                  <a href={`https://${project.url}`} target="_blank" rel="noopener noreferrer" className="text-xs text-primary font-medium">
                     View Code →
                   </a>
                 </div>

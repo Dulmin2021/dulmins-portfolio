@@ -3,7 +3,7 @@
 import { ChevronLeft, ChevronRight, Moon, Sun, Download, Info, User, Smartphone, Bell } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Switch } from "@/components/ui/switch"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Avatar, AvatarImage,AvatarFallback } from "@/components/ui/avatar"
 
 interface SettingsAppProps {
   onClose: () => void
@@ -13,8 +13,13 @@ interface SettingsAppProps {
 
 export default function SettingsApp({ onClose, isDarkMode, setIsDarkMode }: SettingsAppProps) {
   const handleDownloadResume = () => {
-    // Simulate resume download
-    alert("Resume download started! (This is a demo)")
+    const resumePath = "/resume.pdf"
+    const link = document.createElement("a")
+    link.href = resumePath
+    link.download = "Dulmin_Wickramage_Resume.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
@@ -33,12 +38,13 @@ export default function SettingsApp({ onClose, isDarkMode, setIsDarkMode }: Sett
       <div className="flex-1 overflow-y-auto">
         {/* Profile Section */}
         <button className="w-full p-6 border-b border-border hover:bg-accent transition-colors flex items-center gap-4">
-          <Avatar className="w-16 h-16">
-            <AvatarFallback className="text-2xl font-bold bg-primary text-primary-foreground">JD</AvatarFallback>
+          <Avatar className="w-32 h-32 mb-4">
+            <AvatarImage src="/professional-portrait.jpg" alt="My pic" />
+            <AvatarFallback className="text-3xl font-semibold bg-primary text-primary-foreground">DW</AvatarFallback>
           </Avatar>
           <div className="flex-1 text-left">
-            <h2 className="text-xl font-bold">John Developer</h2>
-            <p className="text-sm text-muted-foreground">Full-Stack Developer</p>
+            <h2 className="text-xl font-bold">Dulmin wickramage</h2>
+            <p className="text-sm text-muted-foreground">DevOps enthusiast</p>
           </div>
           <ChevronRight className="w-5 h-5 text-muted-foreground" />
         </button>
@@ -122,7 +128,7 @@ export default function SettingsApp({ onClose, isDarkMode, setIsDarkMode }: Sett
                 <p className="font-medium">Software Update</p>
               </div>
               <div className="space-y-2">
-                <p className="text-sm text-muted-foreground">Your portfolio is up to date</p>
+                <p className="text-sm text-muted-foreground">Your iPhone is up to date</p>
                 <div className="text-xs text-muted-foreground space-y-1">
                   <p className="font-medium">Recent Updates:</p>
                   <p>• Added new project showcases</p>
@@ -139,7 +145,7 @@ export default function SettingsApp({ onClose, isDarkMode, setIsDarkMode }: Sett
         <div className="p-6 text-center text-sm text-muted-foreground">
           <p>iPortfolio v1.0.0</p>
           <p className="mt-1">Created with Next.js & React</p>
-          <p className="mt-4">© 2025 John Developer</p>
+          <p className="mt-4">© 2025 Dulmin wickramage</p>
         </div>
       </div>
     </div>

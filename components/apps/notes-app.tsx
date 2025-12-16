@@ -13,14 +13,14 @@ const notesList = [
   {
     id: 1,
     title: "Professional Skills",
-    preview: "Frontend: React, Next.js, TypeScript, Tailwind CSS\nBackend: Node.js, Express, PostgreSQL...",
+    preview: "Frontend: React, Next.js, TypeScript, Tailwind CSS\nBackend: Node.js, ...",
     date: "12/14/2024",
     category: "Career",
   },
   {
     id: 2,
     title: "Education & Certifications",
-    preview: "B.S. Computer Science - University Name (2019)\nAWS Certified Developer\nGoogle Cloud Professional...",
+    preview: "B.Sc. Computer Science - NSBM Green University, Elements of AI - University of Helsinki...",
     date: "12/10/2024",
     category: "Career",
   },
@@ -35,7 +35,7 @@ const notesList = [
   {
     id: 4,
     title: "Current Projects",
-    preview: "Working on: AI-powered task manager\nLearning: Rust and WebAssembly\nExploring: Blockchain tech...",
+    preview: "Working on: Mind blowing 3d fun site using threeJS\nLearning: Python and WebAssembly\nExploring: Blockchain tech...",
     date: "12/01/2024",
     category: "Work",
   },
@@ -43,7 +43,7 @@ const notesList = [
     id: 5,
     title: "Career Goals",
     preview:
-      "Build impactful products that solve real problems\nContribute to open source\nMentor junior developers...",
+      "Build impactful products that solve real problems\nContribute to open source\nMentor...",
     date: "11/28/2024",
     category: "Career",
   },
@@ -53,11 +53,10 @@ const noteContent = {
   1: `Professional Skills
   
 Frontend Development:
-• React.js & Next.js (5+ years)
-• TypeScript & JavaScript (ES6+)
-• Tailwind CSS, SCSS, Styled Components
+• React.js & Next.js
+• TypeScript & JavaScript
+• Tailwind CSS, Styled Components
 • Responsive & Mobile-First Design
-• Performance Optimization
 
 Backend Development:
 • Node.js & Express
@@ -70,75 +69,68 @@ Tools & Technologies:
 • Git & GitHub
 • Docker & CI/CD
 • Testing (Jest, Cypress)
-• Figma & Design Systems
+• UI UX (Figma, Adobe XD)
 • Agile/Scrum Methodologies`,
 
   2: `Education & Certifications
 
-B.S. Computer Science
-University Name, 2015-2019
-GPA: 3.8/4.0
+B.Sc. Computer Science
+NSBM Green University, 2022-2026
+
 
 Certifications:
-✓ AWS Certified Developer - Associate
-✓ Google Cloud Professional Architect
-✓ Meta Front-End Developer
-✓ MongoDB Certified Developer
+✓ Google IT Support 
+✓ Google UI UX
+✓ Cyber Security Foundation Professional Certificate - CSFPC™
 
 Courses & Learning:
-• Advanced React Patterns
-• System Design & Architecture
-• Machine Learning Fundamentals
-• Web Performance Optimization`,
+• DevOps Specialization on Coursera
+• AWS on Amazon Skill builder
+• Crash course on Python
+`,
 
-  3: `This is Me
+  3: `This is Me!
 
-☕ Coffee Enthusiast
-I start every morning with a pour-over coffee. Favorite roast: Ethiopian Yirgacheffe
+• ♟️checkmate with respect🙇‍♂️.
 
-📸 Photography Hobbyist
-Love capturing landscapes and urban architecture. Check out my Instagram!
+• 📖Reading 20 pages of a novel instead of taking a siesta😴➡️📚.
 
-🥾 Outdoor Adventurer
-Hiking, camping, and exploring nature trails on weekends
+• 🌍🗣️Speaking multiple languages :
+“Hello”, “¡Hola!”, “Hallo”, “Bonjour”, “Ciao”
 
-🎮 Gaming
-Enjoy strategy games and indie titles. Currently playing: Hollow Knight
+• 👨‍🍳✨Cooking new recipes with the confidence of a Michelin-star chef⭐.
 
-🌍 Languages
-Sinhala (native), English, learning Spanish & German
+• 🧪🍸 Mixing up a great cocktail (or a safe mocktail).
 
-💻 First Code
-Built my first website at age 14 - a fan site for my favorite band`,
+• 🧠☕ Believing most problems can be solved after coffee
+`,
 
   4: `Current Projects
 
 🚀 Active Development:
-1. AI Task Manager
-   - Using OpenAI API for smart task suggestions
+1. Tubefetch Youtube Downloader
    - Built with Next.js 15 and Supabase
    - Status: Beta testing
 
-2. Developer Portfolio Template
+2.  Interactive web experiments with data visualizations
    - Open source Next.js template
-   - Dark mode, animations, SEO optimized
-   - Status: Ready to launch
+   - Dark mode, animations, 3D environments, SEO optimized
+   - Status: still working
 
 📚 Learning & Exploring:
-• Rust programming language
-• WebAssembly for performance
-• Blockchain & Web3 technologies
-• Advanced TypeScript patterns
+• Python
+• DevOps and AIOps
+• Intergrating Advanced Automation
 
 🎯 Upcoming Ideas:
-- SaaS boilerplate
+- AI security product
 - Component library
 - Tech blog/newsletter`,
 
   5: `Career Goals
 
 Short-term (1 year):
-✓ Master Next.js 15 and React 19
+✓ Master DevOps Skills
 ✓ Contribute to 3+ open source projects
 ✓ Build and launch 2 SaaS products
 ✓ Grow professional network
@@ -147,17 +139,13 @@ Mid-term (2-3 years):
 • Lead a development team
 • Speak at tech conferences
 • Publish technical articles
-• Mentor junior developers
 
 Long-term (5+ years):
-• Start own tech company
-• Create educational content
-• Build products that impact millions
-• Give back to the community
+ ******************
+You don't need to know them.
+ ******************
 
 Core Values:
-• Write clean, maintainable code
-• Prioritize user experience
 • Embrace continuous learning
 • Collaborate and share knowledge`,
 }

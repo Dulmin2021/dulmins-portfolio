@@ -3,20 +3,7 @@
 import { useState, useEffect } from "react"
 import StatusBar from "./status-bar"
 import AppIcon from "./app-icon"
-import {
-  Camera,
-  ImageIcon,
-  Phone,
-  MessageCircle,
-  Chrome,
-  ShoppingBag,
-  FileText,
-  Music,
-  Settings,
-  Mail,
-  Calendar,
-  Map,
-} from "lucide-react"
+
 
 interface HomeScreenProps {
   isDarkMode: boolean
@@ -135,8 +122,15 @@ export default function HomeScreen({ isDarkMode, onAppClick }: HomeScreenProps) 
   }
 
   return (
-    <div className="relative w-full h-full bg-gradient-to-b from-blue-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-950 dark:to-slate-950 transition-colors duration-500 animate-fade-in">
-      <StatusBar isDarkMode={isDarkMode} />
+    <div className="relative w-full h-full overflow-hidden transition-colors duration-500 animate-fade-in">
+      {/* Wallpaper layer */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[url('/wallpaper.jpeg')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-white/20 dark:bg-black/40 backdrop-blur-sm" />
+      </div>
+
+      <div className="relative z-10 h-full">
+        <StatusBar isDarkMode={isDarkMode} />
 
       <div className="px-6 pt-16 pb-2">
         <div className="glass-effect rounded-2xl p-4 mb-4 border border-white/20 dark:border-white/10 hover-lift">
@@ -198,10 +192,11 @@ export default function HomeScreen({ isDarkMode, onAppClick }: HomeScreenProps) 
               showLabel={false}
               onClick={() => onAppClick?.("messages")}
               badge={3}
-            />
+              />
             <AppIcon
               name="Music"
-              icon="/icon-dark-32x32.png"
+              icon="/reminders-icon.svg"
+              iconClassName="w-14 h-14"
               color="bg-gradient-to-br from-pink-500 to-red-500"
               showLabel={false}
               onClick={() => onAppClick?.("music")}
@@ -214,6 +209,7 @@ export default function HomeScreen({ isDarkMode, onAppClick }: HomeScreenProps) 
       <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2">
         <div className="w-2 h-2 rounded-full bg-foreground" />
         <div className="w-2 h-2 rounded-full bg-foreground/30" />
+      </div>
       </div>
     </div>
   )
