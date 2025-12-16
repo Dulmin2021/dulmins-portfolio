@@ -13,7 +13,7 @@ interface SettingsAppProps {
 
 export default function SettingsApp({ onClose, isDarkMode, setIsDarkMode }: SettingsAppProps) {
   const handleDownloadResume = () => {
-    const resumePath = "/resume.pdf"
+    const resumePath = "/Dulmin_Wickramage_DevOps.pdf"
     const link = document.createElement("a")
     link.href = resumePath
     link.download = "Dulmin_Wickramage_Resume.pdf"
