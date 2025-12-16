@@ -40,7 +40,7 @@ const photoAlbums = [
 // Personal Album Photos
 const personalPhotos = [
   { id: 1, url: "/professional-portrait.jpg" },
-  { id: 2, url: "/professional-portrait.png" },
+  { id: 2, url: "/photo2.jpg" },
   { id: 3, url: "/placeholder-user.jpg" },
   { id: 4, url: "/beautiful-mountain-landscape.png" },
   { id: 5, url: "/web-development-coding-screen.png" },

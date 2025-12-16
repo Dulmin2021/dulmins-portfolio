@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import LockScreen from "@/components/iphone/lock-screen"
 import HomeScreen from "@/components/iphone/home-screen"
 import IPhoneFrame from "@/components/iphone/iphone-frame"
@@ -149,20 +149,32 @@ export default function Portfolio() {
     }
   }
 
+  // Memoize particle positions to prevent hydration mismatch
+  const particles = useMemo(
+    () =>
+      Array.from({ length: 20 }).map(() => ({
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        delay: Math.random() * 5,
+        duration: 5 + Math.random() * 10,
+      })),
+    []
+  )
+
   return (
     <div className={isDarkMode ? "dark" : ""}>
       <main className="h-screen w-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950 flex items-center justify-center transition-colors duration-500 overflow-hidden">
         {/* Floating particles background effect */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {Array.from({ length: 20 }).map((_, i) => (
+          {particles.map((particle, i) => (
             <div
               key={i}
               className="absolute w-2 h-2 bg-primary/10 rounded-full animate-float"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${5 + Math.random() * 10}s`,
+                left: `${particle.left}%`,
+                top: `${particle.top}%`,
+                animationDelay: `${particle.delay}s`,
+                animationDuration: `${particle.duration}s`,
               }}
             />
           ))}
