@@ -116,7 +116,7 @@ export default function Portfolio() {
       setTimeout(() => {
         toast({
           title: "👋 Welcome to my Portfolio!",
-          description: "Explore the apps to learn more about me",
+          description: "Explore the apps to learn more about me. For best viewing, please reduce your browser size to 90%.",
         })
       }, 500)
     }

@@ -20,22 +20,22 @@ const bookmarks = [
 
 const projectLinks = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack Next.js e-commerce with Stripe integration",
-    tech: "Next.js • TypeScript • Stripe",
-    url: "github.com/project1",
+    title: "Tubefetch",
+    description: "A youtube downloader with protection against command injection attacks.",
+    tech: "React • TypeScript",
+    url: "https://github.com/Dulmin2021/tubefetch",
   },
   {
-    title: "AI Chat Application",
-    description: "Real-time chat app with AI-powered responses",
-    tech: "React • Node.js • OpenAI",
-    url: "github.com/project2",
+    title: "BidFlare",
+    description: "A web-based bidding platform that allows to place and manage bids on various products or services.",
+    tech: "React • ASP.NET • SQL Server",
+    url: "https://github.com/Dulmin2021/BidFlare",
   },
   {
-    title: "Task Management SaaS",
-    description: "Collaborative project management tool",
-    tech: "Next.js • Supabase • Tailwind",
-    url: "github.com/project3",
+    title: "Sritop",
+    description: "Linux based system monitor",
+    tech: "python • Textual",
+    url: "https://github.com/Dulmin2021/sritop",
   },
 ]
 
