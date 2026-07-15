@@ -14,8 +14,230 @@ import MusicApp from "@/components/apps/music-app"
 import SettingsApp from "@/components/apps/settings-app"
 import { useToast } from "@/hooks/use-toast"
 import { Toaster } from "@/components/ui/toaster"
-import { Sun, Moon, Github, Linkedin, Mail, Code2, Terminal, Layers } from "lucide-react"
+import { Sun, Moon, Github, Linkedin, Mail } from "lucide-react"
 
+/* ─── Apple-style bento tile base ─── */
+function Tile({
+  children,
+  className = "",
+  onClick,
+  id,
+}: {
+  children: React.ReactNode
+  className?: string
+  onClick?: () => void
+  id?: string
+}) {
+  return (
+    <div
+      id={id}
+      onClick={onClick}
+      className={`rounded-3xl overflow-hidden relative ${onClick ? "cursor-pointer active:scale-[0.97] transition-transform duration-150" : ""} ${className}`}
+    >
+      {children}
+    </div>
+  )
+}
+
+/* ─── Left bento grid ─── */
+function LeftBento() {
+  return (
+    <div className="hidden lg:flex flex-col gap-2.5 w-[210px] xl:w-[230px] flex-shrink-0">
+
+      {/* Hero greeting tile — gradient like Apple's "iOS" banner */}
+      <Tile className="bg-gradient-to-br from-blue-500 via-indigo-500 to-violet-600 p-5 shadow-lg min-h-[110px]">
+        <p className="text-blue-100/80 text-[10px] font-semibold uppercase tracking-widest mb-1">Portfolio</p>
+        <h2 className="text-white text-2xl font-bold leading-tight">Hey, I'm<br />Dulmin 👋</h2>
+        <p className="text-blue-100/80 text-[11px] mt-2 leading-relaxed">DevOps &amp; Full-Stack Developer</p>
+        {/* Decorative circles */}
+        <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-white/10" />
+        <div className="absolute -bottom-8 right-8 w-14 h-14 rounded-full bg-white/5" />
+      </Tile>
+
+      {/* Social row — two small tiles side by side */}
+      <div className="flex gap-2.5">
+        <Tile
+          className="flex-1 bg-slate-900 dark:bg-slate-700 p-4 shadow-md flex flex-col justify-between min-h-[80px]"
+          onClick={() => window.open("https://github.com/Dulmin2021", "_blank")}
+        >
+          <Github className="w-5 h-5 text-white" />
+          <div>
+            <p className="text-white font-bold text-sm leading-none">GitHub</p>
+            <p className="text-slate-400 text-[10px] mt-0.5">Open source</p>
+          </div>
+        </Tile>
+        <Tile
+          className="flex-1 bg-[#0077b5] p-4 shadow-md flex flex-col justify-between min-h-[80px]"
+          onClick={() => window.open("https://www.linkedin.com/in/dulmin-wickramage-464b23197/", "_blank")}
+        >
+          <Linkedin className="w-5 h-5 text-white" />
+          <div>
+            <p className="text-white font-bold text-sm leading-none">LinkedIn</p>
+            <p className="text-blue-200 text-[10px] mt-0.5">Connect</p>
+          </div>
+        </Tile>
+      </div>
+
+      {/* Tech stack tile */}
+      <Tile className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-white/50 dark:border-white/10 p-4 shadow-md">
+        <p className="text-[10px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3">Built with</p>
+        <div className="flex flex-wrap gap-1.5">
+          {[
+            { label: "Next.js",     bg: "bg-black text-white dark:bg-white dark:text-black" },
+            { label: "React 19",    bg: "bg-cyan-500/15 text-cyan-700 dark:text-cyan-400" },
+            { label: "TypeScript",  bg: "bg-blue-500/15 text-blue-700 dark:text-blue-400" },
+            { label: "Tailwind",    bg: "bg-teal-500/15 text-teal-700 dark:text-teal-400" },
+            { label: "DevOps",      bg: "bg-orange-500/15 text-orange-700 dark:text-orange-400" },
+          ].map(({ label, bg }) => (
+            <span
+              key={label}
+              className={`px-2 py-0.5 rounded-full text-[11px] font-semibold ${bg}`}
+            >
+              {label}
+            </span>
+          ))}
+        </div>
+      </Tile>
+
+      {/* Skills row — two small tiles */}
+      <div className="flex gap-2.5">
+        <Tile className="flex-1 bg-gradient-to-br from-emerald-400 to-green-600 p-4 shadow-md min-h-[72px] flex flex-col justify-between">
+          <span className="text-xl">🚀</span>
+          <p className="text-white font-bold text-xs leading-tight">CI/CD<br/>Pipelines</p>
+        </Tile>
+        <Tile className="flex-1 bg-gradient-to-br from-amber-400 to-orange-500 p-4 shadow-md min-h-[72px] flex flex-col justify-between">
+          <span className="text-xl">☁️</span>
+          <p className="text-white font-bold text-xs leading-tight">Cloud<br/>Native</p>
+        </Tile>
+      </div>
+
+      {/* Available status tile */}
+      <Tile className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-white/50 dark:border-white/10 p-3.5 shadow-md flex items-center gap-3">
+        <div className="relative flex-shrink-0">
+          <div className="w-3 h-3 rounded-full bg-emerald-500" />
+          <div className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-60" />
+        </div>
+        <div>
+          <p className="text-foreground font-semibold text-sm leading-tight">Available for Work</p>
+          <p className="text-muted-foreground text-[11px]">Open to opportunities</p>
+        </div>
+      </Tile>
+
+    </div>
+  )
+}
+
+/* ─── Right bento grid ─── */
+function RightBento({
+  isDarkMode,
+  setIsDarkMode,
+}: {
+  isDarkMode: boolean
+  setIsDarkMode: (v: boolean) => void
+}) {
+  return (
+    <div className="hidden lg:flex flex-col gap-2.5 w-[210px] xl:w-[230px] flex-shrink-0">
+
+      {/* Dark mode feature tile — large, prominent */}
+      <Tile
+        onClick={() => setIsDarkMode(!isDarkMode)}
+        id="theme-toggle"
+        className={`p-5 shadow-lg min-h-[110px] flex flex-col justify-between transition-colors duration-500 ${
+          isDarkMode
+            ? "bg-slate-900 border border-slate-700"
+            : "bg-white/70 backdrop-blur-md border border-white/50"
+        }`}
+      >
+        <div className="flex items-center justify-between">
+          <span className="text-3xl">{isDarkMode ? "🌙" : "☀️"}</span>
+          {/* iOS-style toggle pill */}
+          <div className={`w-10 h-6 rounded-full relative transition-colors duration-300 ${isDarkMode ? "bg-indigo-500" : "bg-slate-300"}`}>
+            <div className={`absolute top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 ${isDarkMode ? "translate-x-5" : "translate-x-1"}`} />
+          </div>
+        </div>
+        <div>
+          <p className={`font-bold text-lg leading-tight ${isDarkMode ? "text-white" : "text-slate-900"}`}>
+            {isDarkMode ? "Dark Mode" : "Light Mode"}
+          </p>
+          <p className={`text-[11px] mt-0.5 ${isDarkMode ? "text-slate-400" : "text-slate-500"}`}>
+            Tap to switch appearance
+          </p>
+        </div>
+      </Tile>
+
+      {/* Interactive tips — two-col mini tiles */}
+      <div className="flex gap-2.5">
+        <Tile className="flex-1 bg-gradient-to-br from-pink-500 to-rose-600 p-4 shadow-md min-h-[80px] flex flex-col justify-between">
+          <span className="text-xl">🔓</span>
+          <p className="text-white font-bold text-[11px] leading-tight">Swipe up to unlock</p>
+        </Tile>
+        <Tile className="flex-1 bg-gradient-to-br from-violet-500 to-purple-700 p-4 shadow-md min-h-[80px] flex flex-col justify-between">
+          <span className="text-xl">🎮</span>
+          <p className="text-white font-bold text-[11px] leading-tight">Konami code easter egg</p>
+        </Tile>
+      </div>
+
+      {/* Projects tile */}
+      <Tile className="bg-gradient-to-br from-slate-800 to-slate-900 dark:from-slate-700 dark:to-slate-800 p-4 shadow-lg">
+        <p className="text-slate-400 text-[10px] font-semibold uppercase tracking-widest mb-2">Featured Projects</p>
+        <div className="space-y-2">
+          {[
+            { name: "Tubefetch",  tag: "React · TypeScript",  dot: "bg-cyan-400" },
+            { name: "BidFlare",   tag: "ASP.NET · SQL",        dot: "bg-orange-400" },
+            { name: "Sritop",     tag: "Python · Textual",     dot: "bg-emerald-400" },
+          ].map((p) => (
+            <div key={p.name} className="flex items-center gap-2">
+              <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${p.dot}`} />
+              <div>
+                <p className="text-white text-xs font-semibold leading-none">{p.name}</p>
+                <p className="text-slate-500 text-[10px]">{p.tag}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Tile>
+
+      {/* Download CV + Contact row */}
+      <div className="flex gap-2.5">
+        <Tile
+          className="flex-1 bg-gradient-to-br from-blue-600 to-cyan-500 p-4 shadow-md min-h-[76px] flex flex-col justify-between"
+          onClick={() => {
+            const a = document.createElement("a")
+            a.href = "/Dulmin_Wickramage_DevOps.pdf"
+            a.download = "Dulmin_Wickramage_Resume.pdf"
+            a.click()
+          }}
+        >
+          <span className="text-xl">📄</span>
+          <p className="text-white font-bold text-[11px] leading-tight">Download CV</p>
+        </Tile>
+        <Tile
+          className="flex-1 bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-white/50 dark:border-white/10 p-4 shadow-md min-h-[76px] flex flex-col justify-between"
+          onClick={() => { window.location.href = "mailto:dulmin.edu@gmail.com" }}
+        >
+          <Mail className="w-5 h-5 text-primary" />
+          <p className="text-foreground font-bold text-[11px] leading-tight">dulmin.edu<br/>@gmail.com</p>
+        </Tile>
+      </div>
+
+      {/* iPortfolio brand tile */}
+      <Tile className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-white/50 dark:border-white/10 p-4 shadow-md flex items-center justify-between">
+        <div>
+          <p className="text-foreground font-bold text-sm">iPortfolio</p>
+          <p className="text-muted-foreground text-[11px]">v1.0 · Next.js 16</p>
+        </div>
+        <div className="flex gap-1.5">
+          {["bg-red-400", "bg-yellow-400", "bg-green-400"].map((c) => (
+            <div key={c} className={`w-2.5 h-2.5 rounded-full ${c}`} />
+          ))}
+        </div>
+      </Tile>
+
+    </div>
+  )
+}
+
+/* ─── Main page ─── */
 export default function Portfolio() {
   const [isUnlocked, setIsUnlocked] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -82,121 +304,55 @@ export default function Portfolio() {
 
   const renderApp = () => {
     switch (activeApp) {
-      case "photos":   return <PhotosApp onClose={closeApp} isDarkMode={isDarkMode} />
-      case "phone":    return <PhoneApp onClose={closeApp} isDarkMode={isDarkMode} />
+      case "photos":   return <PhotosApp   onClose={closeApp} isDarkMode={isDarkMode} />
+      case "phone":    return <PhoneApp    onClose={closeApp} isDarkMode={isDarkMode} />
       case "messages": return <MessagesApp onClose={closeApp} isDarkMode={isDarkMode} />
-      case "safari":   return <SafariApp onClose={closeApp} isDarkMode={isDarkMode} />
+      case "safari":   return <SafariApp   onClose={closeApp} isDarkMode={isDarkMode} />
       case "appstore": return <AppStoreApp onClose={closeApp} isDarkMode={isDarkMode} />
-      case "notes":    return <NotesApp onClose={closeApp} isDarkMode={isDarkMode} />
-      case "music":    return <MusicApp onClose={closeApp} isDarkMode={isDarkMode} />
+      case "notes":    return <NotesApp    onClose={closeApp} isDarkMode={isDarkMode} />
+      case "music":    return <MusicApp    onClose={closeApp} isDarkMode={isDarkMode} />
       case "settings": return <SettingsApp onClose={closeApp} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      default:         return <HomeScreen isDarkMode={isDarkMode} onAppClick={setActiveApp} />
+      default:         return <HomeScreen  isDarkMode={isDarkMode} onAppClick={setActiveApp} />
     }
   }
 
   const particles = useMemo(
-    () => Array.from({ length: 20 }).map(() => ({
+    () => Array.from({ length: 16 }).map(() => ({
       left: Math.random() * 100,
       top: Math.random() * 100,
       delay: Math.random() * 5,
-      duration: 5 + Math.random() * 10,
+      duration: 6 + Math.random() * 10,
     })),
     []
   )
 
-  const techStack = [
-    { icon: <Code2 className="w-3.5 h-3.5" />, label: "Next.js" },
-    { icon: <Layers className="w-3.5 h-3.5" />, label: "React 19" },
-    { icon: <Terminal className="w-3.5 h-3.5" />, label: "TypeScript" },
-  ]
-
   return (
     <div className={isDarkMode ? "dark" : ""}>
-      <main className="h-screen w-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950 flex items-center justify-center transition-colors duration-500 overflow-hidden">
+      <main className="h-screen w-screen bg-[#f0f0f5] dark:bg-slate-950 flex items-center justify-center transition-colors duration-500 overflow-hidden">
+
+        {/* Subtle radial gradient backdrop */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(99,102,241,0.08),transparent)] dark:bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(99,102,241,0.15),transparent)]" />
+        </div>
 
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {particles.map((p, i) => (
             <div
               key={i}
-              className="absolute w-2 h-2 bg-primary/10 rounded-full animate-float"
+              className="absolute w-1.5 h-1.5 bg-indigo-400/20 dark:bg-indigo-400/10 rounded-full animate-float"
               style={{ left: `${p.left}%`, top: `${p.top}%`, animationDelay: `${p.delay}s`, animationDuration: `${p.duration}s` }}
             />
           ))}
         </div>
 
-        {/* ── Three-column layout ── */}
-        <div className="relative z-10 flex items-center justify-center gap-6 w-full max-w-5xl px-4">
+        {/* ── Bento + iPhone layout ── */}
+        <div className="relative z-10 flex items-center justify-center gap-5 xl:gap-7 w-full max-w-[1100px] px-4">
 
-          {/* LEFT PANEL — lg+ only */}
-          <div className="hidden lg:flex flex-col items-start gap-4 w-52 flex-shrink-0">
+          {/* LEFT bento grid */}
+          <LeftBento />
 
-            {/* Identity card */}
-            <div className="w-full rounded-2xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-white/40 dark:border-white/10 p-5 shadow-lg">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow-md flex-shrink-0">
-                  DW
-                </div>
-                <div>
-                  <p className="font-bold text-sm text-foreground leading-tight">Dulmin</p>
-                  <p className="text-xs text-muted-foreground">Wickramage</p>
-                </div>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed mb-4">
-                DevOps enthusiast & full-stack developer crafting interactive experiences.
-              </p>
-              <div className="flex gap-2">
-                <a
-                  href="https://github.com/Dulmin2021"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors text-xs font-medium text-foreground"
-                >
-                  <Github className="w-3.5 h-3.5" />
-                  GitHub
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/dulmin-wickramage-464b23197/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-900/30 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors text-xs font-medium text-blue-600 dark:text-blue-400"
-                >
-                  <Linkedin className="w-3.5 h-3.5" />
-                  LinkedIn
-                </a>
-              </div>
-            </div>
-
-            {/* Tech stack */}
-            <div className="w-full rounded-2xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-white/40 dark:border-white/10 p-4 shadow-lg">
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">Built with</p>
-              <div className="flex flex-col gap-2">
-                {techStack.map((tech) => (
-                  <div
-                    key={tech.label}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-xs font-medium"
-                  >
-                    {tech.icon}
-                    {tech.label}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Contact */}
-            <div className="w-full rounded-2xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 dark:from-blue-500/20 dark:to-indigo-500/20 backdrop-blur-md border border-blue-200/40 dark:border-blue-500/20 p-4 shadow-lg">
-              <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-3">Contact</p>
-              <a
-                href="mailto:dulmin.edu@gmail.com"
-                className="flex items-center gap-2 text-xs font-medium text-foreground hover:text-primary transition-colors"
-              >
-                <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                dulmin.edu@gmail.com
-              </a>
-            </div>
-          </div>
-
-          {/* CENTER — iPhone */}
+          {/* CENTER — iPhone simulator */}
           <div className="flex-shrink-0">
             <IPhoneFrame isDarkMode={isDarkMode}>
               {!isUnlocked
@@ -206,73 +362,17 @@ export default function Portfolio() {
             </IPhoneFrame>
           </div>
 
-          {/* RIGHT PANEL — lg+ only */}
-          <div className="hidden lg:flex flex-col items-start gap-4 w-52 flex-shrink-0">
-
-            {/* Dark mode toggle card */}
-            <div className="w-full rounded-2xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-white/40 dark:border-white/10 p-5 shadow-lg">
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">Appearance</p>
-              <button
-                id="theme-toggle"
-                onClick={() => setIsDarkMode(!isDarkMode)}
-                className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border transition-all duration-300 text-sm font-medium shadow-sm cursor-pointer ${
-                  isDarkMode
-                    ? "bg-slate-700 border-slate-600 text-white hover:bg-slate-600"
-                    : "bg-white border-slate-200 text-slate-800 hover:bg-slate-50"
-                }`}
-              >
-                <div className="flex items-center gap-2.5">
-                  {isDarkMode
-                    ? <Moon className="w-4 h-4 text-indigo-300" />
-                    : <Sun className="w-4 h-4 text-amber-500" />
-                  }
-                  <span>{isDarkMode ? "Dark Mode" : "Light Mode"}</span>
-                </div>
-                {/* Toggle pill */}
-                <div className={`w-9 h-5 rounded-full transition-colors duration-300 relative flex-shrink-0 ${isDarkMode ? "bg-indigo-500" : "bg-slate-300"}`}>
-                  <div className={`absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 ${isDarkMode ? "translate-x-4" : "translate-x-0.5"}`} />
-                </div>
-              </button>
-            </div>
-
-            {/* Tips */}
-            <div className="w-full rounded-2xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-white/40 dark:border-white/10 p-5 shadow-lg">
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">Tips</p>
-              <ul className="space-y-2.5 text-xs text-muted-foreground">
-                {[
-                  { icon: "👆", text: "Tap apps to explore" },
-                  { icon: "🔓", text: "Swipe up to unlock" },
-                  { icon: "🎮", text: "Try the Konami code" },
-                  { icon: "📄", text: "Download CV in Settings" },
-                ].map(({ icon, text }) => (
-                  <li key={text} className="flex items-start gap-2">
-                    <span className="mt-0.5">{icon}</span>
-                    <span>{text}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Portfolio label */}
-            <div className="w-full rounded-2xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-white/40 dark:border-white/10 p-4 shadow-lg text-center">
-              <p className="text-[11px] text-muted-foreground">Interactive Portfolio</p>
-              <p className="text-xs font-semibold text-foreground mt-0.5">iPortfolio v1.0</p>
-              <div className="mt-3 flex justify-center gap-1.5">
-                {["bg-red-400", "bg-yellow-400", "bg-green-400"].map((c) => (
-                  <div key={c} className={`w-2.5 h-2.5 rounded-full ${c}`} />
-                ))}
-              </div>
-            </div>
-          </div>
+          {/* RIGHT bento grid */}
+          <RightBento isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         </div>
 
         {/* ── MOBILE bottom bar (hidden on lg+) ── */}
         <div className="lg:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
-          <div className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/85 dark:bg-slate-800/85 backdrop-blur-md border border-white/40 dark:border-white/10 shadow-xl">
+          <div className="flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border border-white/50 dark:border-white/10 shadow-xl">
             <button
               id="theme-toggle-mobile"
               onClick={() => setIsDarkMode(!isDarkMode)}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-lg border text-xs font-medium transition-all duration-200 cursor-pointer ${
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-xl border text-xs font-semibold transition-all duration-200 cursor-pointer ${
                 isDarkMode
                   ? "bg-slate-700 border-slate-600 text-white"
                   : "bg-white border-slate-200 text-slate-800"
@@ -281,15 +381,18 @@ export default function Portfolio() {
               {isDarkMode ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}
               {isDarkMode ? "Light" : "Dark"}
             </button>
-            <div className="w-px h-4 bg-border" />
-            <a href="https://github.com/Dulmin2021" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Github className="w-4 h-4" />
+            <div className="w-px h-4 bg-slate-200 dark:bg-slate-600" />
+            <a href="https://github.com/Dulmin2021" target="_blank" rel="noopener noreferrer"
+              className="w-8 h-8 rounded-xl bg-slate-900 dark:bg-slate-700 flex items-center justify-center hover:opacity-80 transition-opacity">
+              <Github className="w-4 h-4 text-white" />
             </a>
-            <a href="https://www.linkedin.com/in/dulmin-wickramage-464b23197/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600 transition-colors">
-              <Linkedin className="w-4 h-4" />
+            <a href="https://www.linkedin.com/in/dulmin-wickramage-464b23197/" target="_blank" rel="noopener noreferrer"
+              className="w-8 h-8 rounded-xl bg-[#0077b5] flex items-center justify-center hover:opacity-80 transition-opacity">
+              <Linkedin className="w-4 h-4 text-white" />
             </a>
-            <a href="mailto:dulmin.edu@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Mail className="w-4 h-4" />
+            <a href="mailto:dulmin.edu@gmail.com"
+              className="w-8 h-8 rounded-xl bg-primary flex items-center justify-center hover:opacity-80 transition-opacity">
+              <Mail className="w-4 h-4 text-white" />
             </a>
           </div>
         </div>
