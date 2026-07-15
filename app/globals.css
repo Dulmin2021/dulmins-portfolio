@@ -246,9 +246,8 @@
 }
 
 .animate-shimmer {
-  animation: shimmer 2s linear infinite;
-  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
-  background-size: 1000px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 
 /* Glassmorphism effect for iOS-style UI */
