@@ -2063,7 +2063,7 @@ const initialMessages = [
     },
     {
         id: 5,
-        text: "I've built a todo app with docker, a youtube downloader, and a linux based system moonitor. Check out the App Store app to see my feature project showcase!",
+        text: "I've built a todo app with docker, a youtube downloader, and a linux based system monitor. Check out the App Store app to see my feature project showcase!",
         sender: "me",
         timestamp: "10:34 AM"
     },
@@ -2381,22 +2381,22 @@ const bookmarks = [
 ];
 const projectLinks = [
     {
-        title: "E-Commerce Platform",
-        description: "Full-stack Next.js e-commerce with Stripe integration",
-        tech: "Next.js • TypeScript • Stripe",
-        url: "github.com/project1"
+        title: "Tubefetch",
+        description: "A youtube downloader with protection against command injection attacks.",
+        tech: "React • TypeScript",
+        url: "https://github.com/Dulmin2021/tubefetch"
     },
     {
-        title: "AI Chat Application",
-        description: "Real-time chat app with AI-powered responses",
-        tech: "React • Node.js • OpenAI",
-        url: "github.com/project2"
+        title: "BidFlare",
+        description: "A web-based bidding platform that allows to place and manage bids on various products or services.",
+        tech: "React • ASP.NET • SQL Server",
+        url: "https://github.com/Dulmin2021/BidFlare"
     },
     {
-        title: "Task Management SaaS",
-        description: "Collaborative project management tool",
-        tech: "Next.js • Supabase • Tailwind",
-        url: "github.com/project3"
+        title: "Sritop",
+        description: "Linux based system monitor",
+        tech: "python • Textual",
+        url: "https://github.com/Dulmin2021/sritop"
     }
 ];
 function SafariApp({ onClose, isDarkMode }) {
@@ -4709,7 +4709,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2
 ;
 function SettingsApp({ onClose, isDarkMode, setIsDarkMode }) {
     const handleDownloadResume = ()=>{
-        const resumePath = "/resume.pdf";
+        const resumePath = "/Dulmin_Wickramage_DevOps.pdf";
         const link = document.createElement("a");
         link.href = resumePath;
         link.download = "Dulmin_Wickramage_Resume.pdf";
@@ -5819,7 +5819,7 @@ function Portfolio() {
             setTimeout(()=>{
                 toast({
                     title: "👋 Welcome to my Portfolio!",
-                    description: "Explore the apps to learn more about me"
+                    description: "Explore the apps to learn more about me. For best viewing, please reduce your browser size to 90%."
                 });
             }, 500);
         }
