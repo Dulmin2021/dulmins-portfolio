@@ -271,3 +271,20 @@
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
+
+/* Dancing Script font utility */
+.font-dancing {
+  font-family: var(--font-dancing), "Brush Script MT", cursive;
+}
+
+/* Welcome word fade transition */
+@keyframes welcomeFade {
+  0%   { opacity: 0; transform: translateY(6px) scale(0.96); }
+  15%  { opacity: 1; transform: translateY(0)   scale(1); }
+  80%  { opacity: 1; transform: translateY(0)   scale(1); }
+  100% { opacity: 0; transform: translateY(-6px) scale(0.96); }
+}
+
+.animate-welcome {
+  animation: welcomeFade 1s ease-in-out;
+}

@@ -40,6 +40,70 @@ function Tile({
   )
 }
 
+/* ─── Welcome tile: Apple "hello" style ─── */
+const WELCOMES = [
+  { word: "ආයුබෝවන්",         lang: "Sinhala" },
+  { word: "Welcome",           lang: "English" },
+  { word: "Bienvenue",         lang: "Français" },
+  { word: "Bienvenido",        lang: "Español" },
+  { word: "Benvenuto",         lang: "Italiano" },
+  { word: "Willkommen",        lang: "Deutsch" },
+  { word: "مرحباً",            lang: "العربية" },
+  { word: "स्वागत है",         lang: "हिन्दी" },
+  { word: "ようこそ",            lang: "日本語" },
+  { word: "환영합니다",           lang: "한국어" },
+  { word: "欢迎",               lang: "中文" },
+  { word: "Добро пожаловать",  lang: "Русский" },
+]
+
+function WelcomeTile() {
+  const [idx, setIdx]       = useState(0)
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    const cycle = setInterval(() => {
+      setVisible(false)
+      setTimeout(() => {
+        setIdx(i => (i + 1) % WELCOMES.length)
+        setVisible(true)
+      }, 300)
+    }, 1800)
+    return () => clearInterval(cycle)
+  }, [])
+
+  const current = WELCOMES[idx]
+  const isRtl   = current.lang === "العربية"
+
+  return (
+    <Tile className="bg-black border border-white/8 shadow-lg overflow-hidden min-h-[96px] flex flex-col items-center justify-center gap-1 px-4 py-4 relative">
+      {/* Subtle glow orb */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full blur-2xl opacity-20"
+          style={{ background: "radial-gradient(circle, #a78bfa, #3b82f6)" }} />
+      </div>
+
+      {/* Rotating word */}
+      <div
+        key={idx}
+        dir={isRtl ? "rtl" : "ltr"}
+        className={`animate-welcome font-dancing text-center leading-none ${
+          current.word.length > 10 ? "text-2xl" : "text-3xl"
+        } text-white font-bold tracking-tight`}
+      >
+        {current.word}
+      </div>
+
+      {/* Language label */}
+      <p
+        key={`lang-${idx}`}
+        className="animate-welcome text-white/40 text-[10px] font-medium tracking-widest uppercase"
+      >
+        {current.lang}
+      </p>
+    </Tile>
+  )
+}
+
 /* ─── Left bento grid ─── */
 function LeftBento() {
   return (
@@ -49,7 +113,7 @@ function LeftBento() {
       <Tile className="bg-gradient-to-br from-blue-500 via-indigo-500 to-violet-600 p-5 shadow-lg min-h-[110px]">
         <p className="text-blue-100/80 text-[10px] font-semibold uppercase tracking-widest mb-1">Portfolio</p>
         <h2 className="text-white text-2xl font-bold leading-tight">Hey, I'm<br />Dulmin 👋</h2>
-        <p className="text-blue-100/80 text-[11px] mt-2 leading-relaxed">DevOps &amp; Full-Stack Developer</p>
+        <p className="text-blue-100/80 text-[11px] mt-2 leading-relaxed">A DevOps Enthusiast </p>
         {/* Decorative circles */}
         <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-white/10" />
         <div className="absolute -bottom-8 right-8 w-14 h-14 rounded-full bg-white/5" />
@@ -88,7 +152,6 @@ function LeftBento() {
             { label: "React 19",    bg: "bg-cyan-500/15 text-cyan-700 dark:text-cyan-400" },
             { label: "TypeScript",  bg: "bg-blue-500/15 text-blue-700 dark:text-blue-400" },
             { label: "Tailwind",    bg: "bg-teal-500/15 text-teal-700 dark:text-teal-400" },
-            { label: "DevOps",      bg: "bg-orange-500/15 text-orange-700 dark:text-orange-400" },
           ].map(({ label, bg }) => (
             <span
               key={label}
@@ -123,6 +186,9 @@ function LeftBento() {
           <p className="text-muted-foreground text-[11px]">Open to opportunities</p>
         </div>
       </Tile>
+
+      {/* Apple "hello" — multilingual welcome tile */}
+      <WelcomeTile />
 
     </div>
   )
