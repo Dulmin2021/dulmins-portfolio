@@ -11,6 +11,7 @@ import SafariApp from "@/components/apps/safari-app"
 import AppStoreApp from "@/components/apps/appstore-app"
 import NotesApp from "@/components/apps/notes-app"
 import MusicApp from "@/components/apps/music-app"
+import ClockApp from "@/components/apps/clock-app"
 import SettingsApp from "@/components/apps/settings-app"
 import { useToast } from "@/hooks/use-toast"
 import { Toaster } from "@/components/ui/toaster"
@@ -205,7 +206,10 @@ function RightBento({
             const a = document.createElement("a")
             a.href = "/Dulmin_Wickramage_DevOps.pdf"
             a.download = "Dulmin_Wickramage_Resume.pdf"
+            a.rel = "noopener noreferrer"
+            document.body.appendChild(a)
             a.click()
+            document.body.removeChild(a)
           }}
         >
           <span className="text-xl">📄</span>
@@ -311,6 +315,7 @@ export default function Portfolio() {
       case "appstore": return <AppStoreApp onClose={closeApp} isDarkMode={isDarkMode} />
       case "notes":    return <NotesApp    onClose={closeApp} isDarkMode={isDarkMode} />
       case "music":    return <MusicApp    onClose={closeApp} isDarkMode={isDarkMode} />
+      case "clock":    return <ClockApp    onClose={closeApp} isDarkMode={isDarkMode} />
       case "settings": return <SettingsApp onClose={closeApp} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       default:         return <HomeScreen  isDarkMode={isDarkMode} onAppClick={setActiveApp} />
     }

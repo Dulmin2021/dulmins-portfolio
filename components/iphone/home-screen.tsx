@@ -77,6 +77,14 @@ export default function HomeScreen({ isDarkMode, onAppClick }: HomeScreenProps) 
       color: "bg-gradient-to-br from-green-400 to-green-600"
      },
 
+    {
+      id: "clock",
+      name: "Clock",
+      icon: "/clock-icon.svg",
+      iconClassName: "w-14 h-14",
+      color: "bg-black",
+    },
+
     { 
       id: "calendar", 
       name: "Calendar", 
