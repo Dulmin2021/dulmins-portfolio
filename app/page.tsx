@@ -331,7 +331,7 @@ export default function Portfolio() {
         })
         console.log("%c🚀 Welcome to Developer Mode!", "font-size: 24px; font-weight: bold; color: #4CAF50;")
         console.log("%c✨ Easter Egg Found! You're a true explorer.", "font-size: 16px; color: #2196F3; font-style: italic;")
-        console.log("%cBuilt with: Next.js 16, React 19, TypeScript, Tailwind CSS", "font-weight: bold;")
+        console.log("%cBuilt with: Next.js 16, TypeScript, Tailwind CSS", "font-weight: bold;")
         setKonamiCode([])
       }
     }
